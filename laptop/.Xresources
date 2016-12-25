@@ -1,0 +1,4 @@
+URxvt.urgentOnBell: off
+URxvt.scrollBar: off
+URxvt.coursorBlink: true
+URxvt.coursorColor: #ffff00

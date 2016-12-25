@@ -1,0 +1,2 @@
+#!/bin/sh
+echo ps:$(ps -e | wc -l)

@@ -1,0 +1,4 @@
+#!/bin/bash
+# using youtube-dl
+# youtube link and converts it into mp3
+youtube-dl --audio-format mp3 -x $1

@@ -1,0 +1,2 @@
+#!/bin/bash
+wget -c -t 0 -T 1 --waitretry=60 --timeout=60 $1

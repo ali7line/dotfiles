@@ -1,0 +1,7 @@
+git submodule add http://github.com/kien/ctrlp.vim laptop/.vim/bundle/ctrlp.vim
+git submodule add http://github.com/Lokaltog/vim-powerline laptop/.vim/bundle/vim-powerline
+git submodule add http://github.com/Yggdroot/indentLine laptop/.vim/bundle/indentLine
+git submodule add http://github.com/nvie/vim-flake8 laptop/.vim/bundle/vim-flake8
+git submodule add http://github.com/scrooloose/nerdtree laptop/.vim/bundle/nerdtree
+git submodule add http://github.com/ervandew/supertab laptop/.vim/bundle/supertab
+git submodule add http://github.com/davidhalter/jedi-vim laptop/.vim/bundle/jedi-vim

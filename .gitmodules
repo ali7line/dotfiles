@@ -1,0 +1,21 @@
+[submodule "laptop/.vim/bundle/ctrlp.vim"]
+	path = laptop/.vim/bundle/ctrlp.vim
+	url = http://github.com/kien/ctrlp.vim
+[submodule "laptop/.vim/bundle/vim-powerline"]
+	path = laptop/.vim/bundle/vim-powerline
+	url = http://github.com/Lokaltog/vim-powerline
+[submodule "laptop/.vim/bundle/indentLine"]
+	path = laptop/.vim/bundle/indentLine
+	url = http://github.com/Yggdroot/indentLine
+[submodule "laptop/.vim/bundle/vim-flake8"]
+	path = laptop/.vim/bundle/vim-flake8
+	url = http://github.com/nvie/vim-flake8
+[submodule "laptop/.vim/bundle/nerdtree"]
+	path = laptop/.vim/bundle/nerdtree
+	url = http://github.com/scrooloose/nerdtree
+[submodule "laptop/.vim/bundle/supertab"]
+	path = laptop/.vim/bundle/supertab
+	url = http://github.com/ervandew/supertab
+[submodule "laptop/.vim/bundle/jedi-vim"]
+	path = laptop/.vim/bundle/jedi-vim
+	url = http://github.com/davidhalter/jedi-vim

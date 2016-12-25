@@ -1,0 +1,4 @@
+
+# turn keyboard-bell off xterm
+xset b off
+exec awesome

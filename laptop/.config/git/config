@@ -1,0 +1,7 @@
+[user]
+	email = "king110.py@gmail.com"
+	name = "Alex King"
+[alias]
+	tree = log --graph --decorate --pretty=oneline \n--abbrev-commit
+[core]
+	editor = vim
