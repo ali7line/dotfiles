@@ -8,7 +8,7 @@
 
 -- {{{ Main
 theme = {}
-theme.wallpaper = "/usr/share/awesome/themes/zenburn/zenburn-background.png"
+theme.wallpaper = "~/.config/awesome/themes/zenburn/wallpaper/zenburn-background.png"
 -- }}}
 
 -- {{{ Styles
@@ -32,7 +32,7 @@ theme.border_marked = "#CC9393"
 -- }}}
 
 -- {{{ Titlebars
-theme.titlebar_bg_focus  = "#3F3F3F"
+theme.titlebar_bg_focus  = "#000000"
 theme.titlebar_bg_normal = "#3F3F3F"
 -- }}}
 

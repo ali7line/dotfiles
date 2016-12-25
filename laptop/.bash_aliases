@@ -9,7 +9,9 @@ alias gd='git diff'
 #----------------------------------
 alias ...='cd ../..'
 alias ..='cd ..'
+alias cDD='cd ~/downloads'
 alias cdp='cd ~/projects'
+alias cdot='cd ~/dotfiles'
 alias cdpp='cd ~/public/work/'
 alias cdg='cd ~/gitClones'
 #----------------------------------
