@@ -42,6 +42,7 @@ alias vimbook='vim ~/projects/scrappers/it-ebooks-scraper/title.txt'
 #alias vim2='/usr/bin/vim'
 #alias cvim='vim -u ~/setting/essential.vim -N -n'     #Clean vim with no setting 
 #alias mvim='vim -u ~/setting/minimum.vim -N -n'     #Minimum vim with no setting 
+alias e='vim'
 
 #----------------------------------
 alias Cn='cmus-remote --server ~/.cmus/socket -n'
