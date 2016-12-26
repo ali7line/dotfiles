@@ -1,5 +1,6 @@
 *.log
 *log
+*.lock
 *.bak
 mpd.db
 mpd.pid
@@ -20,3 +21,4 @@ playlists/
 gthumb/
 gtk-2.0/
 Brackets/
+laptop/.config/deluge/icons

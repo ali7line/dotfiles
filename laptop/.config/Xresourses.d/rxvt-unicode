@@ -1,12 +1,18 @@
 ! URxvt.
 
+
+!URxvt.modifier              : meta
 URxvt.termName              : rxvt-256-color
-URxvt.transparent           : false
+URxvt.transparent           : true
+!URxvt.transparent           : false
+URxvt.shading           : 20
+
 URxvt.fading                : 35
 
 URXvt.allow_bold            : false
 URXvt.letterSpace           : -1
 URXvt.lineSpace             : 0
+URXvt.chdir             : 
 
 
 URxvt.urgentOnBell          : False
@@ -16,10 +22,10 @@ URxvt.coursorBlink          : True
 URxvt.coursorColor          : #657b83
 URxvt.iso14755              : False
 URxvt.iso14755_52           : False
-URxvt.meta8                 : True
+!URxvt.meta8                 : True
 URxvt.depth                 : 32
 !URxvt.iconFile: /usr/share/icons/Humanity/apps/128/utilities-terminal.svg
-URxvt.metaSendsEscape:      True
+!URxvt.metaSendsEscape:      True
 !
 URxvt.internalBorder:       0
 URxvt.externalBorder:       0
@@ -115,3 +121,9 @@ URxvt.color14: #00ffff
 URxvt.color7:  #cfcfcf
 URxvt.color15: #a8a8a8
 !
+URxvt.keysym.F1: \033OP
+URxvt.keysym.F2: \033OQ
+URxvt.keysym.F3: \033OR
+URxvt.keysym.F4: \033OS
+URxvt.keysym.F5: \033OT
+
