@@ -4,3 +4,5 @@ xset b off
 
 # setup urxvtd
 urxvtd -q -f -o
+# setup urxvtd
+xrdb ~/.Xresources
