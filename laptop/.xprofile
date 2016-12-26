@@ -1,3 +1,6 @@
 
 # turn keyboard-bell off xterm
 xset b off
+
+# setup urxvtd
+urxvtd -q -f -o

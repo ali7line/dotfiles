@@ -41,8 +41,8 @@ end
 beautiful.init("~/.config/awesome/themes/zenburn/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "xterm -rv -fn 10x20 -fa 'Liberation Mono size:20 antialias=false'"
-editor = os.getenv("EDITOR") or "nano"
+terminal = "urxvtc"
+editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
