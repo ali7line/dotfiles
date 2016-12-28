@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/king110/projects/DOTA2_ADDICT/dota2GameCollector'
-let g:netrw_dirhist_2='/home/king110/.vimperator'
-let g:netrw_dirhist_3='/home/king110/projects/learnCurve/docker/identidock/app'

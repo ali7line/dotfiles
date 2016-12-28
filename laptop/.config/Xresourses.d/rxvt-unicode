@@ -7,7 +7,7 @@ URxvt.transparent           : true
 !URxvt.transparent           : false
 URxvt.shading           : 20
 
-URxvt.fading                : 35
+URxvt.fading                : 10
 
 URXvt.allow_bold            : false
 URXvt.letterSpace           : -1

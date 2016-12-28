@@ -70,7 +70,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias ee='vim ~/.bash_aliases'
 alias ev='evince'
 alias rr='source ~/.bashrc && source ~/.bash_aliases'
-alias mpp='mpd ~/.config/mpd/mpd.conf'
+alias mpp='mpd ~/.mpd/mpd.conf'
 alias aa='amixer sset Master 5%+'
 alias zz='amixer sset Master 5%-'
 alias xxx='xrdb ~/.Xresources && urxvtc'
