@@ -10,10 +10,15 @@ export PATH=~/scripts:$PATH
 export PATH=~/funcs:$PATH
 export WEECHAT_HOME=$HOME/.config/weechat
 
-
-
 export WORKON_HOME=$HOME/.local/virtualenv 
-source /usr/bin/virtualenvwrapper.sh
+
+if [ -f /usr/bin/virtualenvwrapper.sh ]; then
+    source /usr/bin/virtualenvwrapper.sh
+fi
+
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
