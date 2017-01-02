@@ -167,9 +167,9 @@ let g:flake8_quickfix_height=7
 
 " Jedi ========================================================================
 "autocmd FileType python setlocal completeopt-=preview
-"let g:jedi#completions_command = "<C-l>"
+"let g:jedi#completions_enabled = 0
 "let g:jedi#use_tabs_not_buffers = 1
-"let g:jedi#popup_on_dot = 1
+let g:jedi#popup_on_dot = 0
 "let g:jedi#popup_select_first = 1
 let g:jedi#goto_command = "<leader>d"
 let g:jedi#goto_assignments_command = "<leader>g"
