@@ -44,6 +44,7 @@ beautiful.init("~/.config/awesome/themes/zenburn/theme.lua")
 terminal = "urxvtc"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
+mpd_port = os.getenv("MPD_PORT") or 6600
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -214,6 +215,19 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
+    -- mpd control
+    awful.key({ modkey,           }, "[", function () awful.util.spawn("mpc --port 6601 play") end),
+    awful.key({ modkey,           }, "]", function () awful.util.spawn("mpc --port 6601 pause") end),
+    awful.key({ modkey,           }, "\\", function () awful.util.spawn("mpc --port 6601 next") end),
+
+    -- brightness control
+    awful.key({ modkey,           }, "F5", function () awful.util.spawn("xbacklight -dec 10") end),
+    awful.key({ modkey,           }, "F6", function () awful.util.spawn("xbacklight -inc 10") end),
+
+    -- vol control
+    awful.key({ modkey,           }, "-", function () awful.util.spawn("amixer sset Master 10%-") end),
+    awful.key({ modkey,           }, "=", function () awful.util.spawn("amixer sset Master 10%+") end),
+
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),

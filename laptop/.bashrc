@@ -1,7 +1,8 @@
 
 # ~/.bashrc
 #
-
+export MPD_PORT=6601
+export PHANTOMJS_BIN=~/bin/phantomjs
 export VISUAL=vim
 export TERM=xterm-256color
 export HISTFILE=$HOME/.bash_history
@@ -11,6 +12,7 @@ export PATH=~/funcs:$PATH
 export WEECHAT_HOME=$HOME/.config/weechat
 
 export WORKON_HOME=$HOME/.local/virtualenv 
+
 
 if [ -f /usr/bin/virtualenvwrapper.sh ]; then
     source /usr/bin/virtualenvwrapper.sh
