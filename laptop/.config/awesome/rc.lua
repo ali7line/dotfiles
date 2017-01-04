@@ -219,6 +219,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "[", function () awful.util.spawn("mpc --port 6601 play") end),
     awful.key({ modkey,           }, "]", function () awful.util.spawn("mpc --port 6601 pause") end),
     awful.key({ modkey,           }, "\\", function () awful.util.spawn("mpc --port 6601 next") end),
+    awful.key({ modkey, "Shift"   }, "\\", function () awful.util.spawn("mpc --port 6601 pre") end),
 
     -- brightness control
     awful.key({ modkey,           }, "F5", function () awful.util.spawn("xbacklight -dec 10") end),

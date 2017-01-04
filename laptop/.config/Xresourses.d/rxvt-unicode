@@ -1,4 +1,5 @@
 ! URxvt.
+#define FONT_SIZE 18
 
 
 !URxvt.modifier              : meta
@@ -58,10 +59,10 @@ URxvt.geometry: 145x45
 !URxvt.letterSpace: -1
 !
 !!!DejaVu Sans
-URxvt.font: xft:Dejavu Sans Mono:pixelsize=18:antialias=true:hinting=true
-URxvt.boldFont: xft:DejaVu Sans Mono:bold:pixelsize=18:antialias=true:hinting=true
-URxvt.italicFont: xft:DejaVu Sans Mono:italic:pixelsize=18:antialias=true:hinting=true
-URxvt.boldItalicFont: xft:DejaVu Sans Mono:bold:italic:pixelsize=18:antialias=true
+URxvt.font: xft:Dejavu Sans Mono:pixelsize=FONT_SIZE:antialias=true:hinting=true
+URxvt.boldFont: xft:DejaVu Sans Mono:bold:pixelsize=FONT_SIZE:antialias=true:hinting=true
+URxvt.italicFont: xft:DejaVu Sans Mono:italic:pixelsize=FONT_SIZE:antialias=true:hinting=true
+URxvt.boldItalicFont: xft:DejaVu Sans Mono:bold:italic:pixelsize=FONT_SIZE:antialias=true
 !URxvt.letterSpace: -1
 !
 !
