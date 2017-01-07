@@ -2,6 +2,7 @@
 *log
 *.lock
 *.bak
+*.cache
 mpd.db
 mpd.pid
 auth
