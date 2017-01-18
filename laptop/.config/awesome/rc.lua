@@ -216,8 +216,8 @@ root.buttons(awful.util.table.join(
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
     -- mpd control
-    awful.key({ modkey,           }, "[", function () awful.util.spawn("mpc --port 6601 play") end),
-    awful.key({ modkey,           }, "]", function () awful.util.spawn("mpc --port 6601 pause") end),
+    awful.key({ modkey,           }, "[", function () awful.util.spawn("mpc --port 6601 pause") end),
+    awful.key({ modkey,           }, "]", function () awful.util.spawn("mpc --port 6601 play") end),
     awful.key({ modkey,           }, "\\", function () awful.util.spawn("mpc --port 6601 next") end),
     awful.key({ modkey, "Shift"   }, "\\", function () awful.util.spawn("mpc --port 6601 pre") end),
 

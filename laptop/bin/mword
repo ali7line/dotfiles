@@ -1,0 +1,1 @@
+env WINEPREFIX="/home/king110/.wineprefixes/office2010" wine start /ProgIDOpen Word.Document.12 %f
