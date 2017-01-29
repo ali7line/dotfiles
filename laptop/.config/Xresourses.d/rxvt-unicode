@@ -1,5 +1,5 @@
 ! URxvt.
-#define FONT_SIZE 22
+#define FONT_SIZE 19
 
 
 !URxvt.modifier              : meta

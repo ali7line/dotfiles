@@ -29,8 +29,10 @@ alias ls1='ls -1'
 #----------------------------------
 alias matlabc='matlab -nodesktop -nojvm -nosplash'
 #----------------------------------
-alias ipython-web='ipython notebook --no-browser --ip=0.0.0.0'
-alias ipython3-web='ipython3 notebook --no-browser --ip=0.0.0.0'
+#alias ipython-web='ipython notebook --no-browser --ip=0.0.0.0'
+#alias ipython3-web='ipython3 notebook --no-browser --ip=0.0.0.0'
+alias ipython-web='ipython notebook --no-browser '
+alias ipython3-web='ipython3 notebook --no-browser '
 #
 #----------------------------------
 alias rmgit='git ls-files -z -d | xargs -0 --no-run-if-empty git rm'
@@ -77,5 +79,5 @@ alias xxx='xrdb ~/.Xresources && urxvtc'
 alias xre='vim ~/.config/Xresourses.d/rxvt-unicode'
 alias PPP='cd ~/tmp/practice'
 alias mit='cd ~/life/projects/ongoing/mit-challange'
-alias scd='pwd >> ~/tmp/_CD_SAVED'
+alias scd='pwd > ~/tmp/_CD_SAVED'
 alias lcd='cd $(cat ~/tmp/_CD_SAVED)'
