@@ -1,0 +1,28 @@
+"""
+This script substitue space with underline
+for a given file.
+USAGE: subspace.py <filename>
+
+AUTHOR: Ali Soltani 
+CREATED: 2017-02-04
+UPDATED: 
+"""
+import sys
+import os
+from shutil import move
+
+if len(sys.argv) == 2:
+    filename = sys.argv[1]
+elif len(sys.argv) == 1:
+    raise 'no filename specifiled'
+else:
+    raise 'too many inputs'
+
+replace_filename = filename.replace(' ', '_')
+if os.path.exists(replace_filename):
+    if replace_filename == filename:
+        print('no conversion needed')
+    else:
+        print('file %s already exists' % replace_filename)
+else:
+    move(filename, replace_filename)
