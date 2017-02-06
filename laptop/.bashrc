@@ -8,6 +8,7 @@ export TERM=xterm-256color
 export HISTFILE=$HOME/.bash_history
 export PATH=~/bin:$PATH
 export PATH=~/scripts:$PATH
+export PATH=~/scripts/control:$PATH
 export PATH=~/funcs:$PATH
 export WEECHAT_HOME=$HOME/.config/weechat
 
