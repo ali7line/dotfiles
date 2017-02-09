@@ -23,6 +23,8 @@ gthumb/
 gtk-2.0/
 Brackets/
 laptop/.config/deluge/icons
+laptop/.config/deluge/core.conf
+laptop/.config/deluge/gtkui.conf
 laptop/.vim/.netrwhist
 laptop/bin/phantomjs
 gtkui.conf

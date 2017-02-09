@@ -36,6 +36,16 @@ noremap <Leader>E :qa!<CR>   " Quit all windows
 noremap <Leader>0 :tabm 0<CR>
 noremap <Leader>$ :tabm<CR>
 
+" show invisible tabs and endline
+"noremap <Leader>l :set list!<CR>
+noremap <Leader>l :IndentLinesToggle<CR>
+
+" char u00ac ¬
+" char u25b8 ▸
+set listchars=eol:¬,tab:▸\ 
+"let g:indentLine_char = '▸'
+",trail:~,extends:>,precedes:<
+
 " keys to move around the windows
 map <c-j> <c-w>j map <c-k> <c-w>k
 map <c-l> <c-w>l
@@ -135,11 +145,8 @@ set ignorecase
 set smartcase
 
 
-
 "nnoremap <space> za
 
-"set list
-"set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 " Better copy & paste
 " When you want to paste large blocks of code into vim, press F2 before you
 " paste. At the bottom you should see ``-- INSERT (paste) --``.

@@ -33,11 +33,11 @@ initializeANSI
 cat << EOF
 
 ${invon}
-${redf}   ▄█     █▄    ${greenf}   ▄▄     ▄▄    ${yellowf}   ▄▄     ▄▄    ${bluef}   ▄▄     ▄▄    ${purplef}   ▄▄     ▄▄    ${cyanf}   ▄█     █▄   
-${redf} ▄█▀  ▄▄▄  ▀█▄  ${greenf} ▄█▀  ▄▄▄  ▀█▄  ${yellowf} ▄█▀  ▄▄▄  ▀█▄  ${bluef} ▄█▀  ▄▄▄  ▀█▄  ${purplef} ▄█▀  ▄▄▄  ▀█▄  ${cyanf} ▄█▀  ▄▄▄  ▀█▄ 
-${redf} ██▄▄██▀██▄▄██  ${greenf} ██▄▄██▀██▄▄██  ${yellowf} ██▄▄██▀██▄▄██  ${bluef} ██▄▄██▀██▄▄██  ${purplef} ██▄▄██▀██▄▄██  ${cyanf} ██▄▄██▀██▄▄██ 
-${redf} ██▀▀█████▀▀██  ${greenf} ██▀▀█████▀▀██  ${yellowf} ██▀▀█████▀▀██  ${bluef} ██▀▀█████▀▀██  ${purplef} ██▀▀█████▀▀██  ${cyanf} ██▀▀█████▀▀██ 
-${redf} ▀█▄  ▀▀▀  ▄█▀  ${greenf} ▀█▄  ▀▀▀  ▄█▀  ${yellowf} ▀█▄  ▀▀▀  ▄█▀  ${bluef} ▀█▄  ▀▀▀  ▄█▀  ${purplef} ▀█▄  ▀▀▀  ▄█▀  ${cyanf} ▀█▄  ▀▀▀  ▄█▀ 
-${redf}   ▀█     █▀    ${greenf}   ▀▀     ▀▀    ${yellowf}   ▀▀     ▀▀    ${bluef}   ▀▀     ▀▀    ${purplef}   ▀▀     ▀▀    ${cyanf}   ▀█     █▀   
+${redf}   ▄█     █▄    ${yellowf}   ▄▄     ▄▄    ${bluef}   ▄▄     ▄▄    ${purplef}   ▄▄     ▄▄    ${cyanf}   ▄█     █▄   
+${redf} ▄█▀  ▄▄▄  ▀█▄  ${yellowf} ▄█▀  ▄▄▄  ▀█▄  ${bluef} ▄█▀  ▄▄▄  ▀█▄  ${purplef} ▄█▀  ▄▄▄  ▀█▄  ${cyanf} ▄█▀  ▄▄▄  ▀█▄ 
+${redf} ██▄▄██▀██▄▄██  ${yellowf} ██▄▄██▀██▄▄██  ${bluef} ██▄▄██▀██▄▄██  ${purplef} ██▄▄██▀██▄▄██  ${cyanf} ██▄▄██▀██▄▄██ 
+${redf} ██▀▀█████▀▀██  ${yellowf} ██▀▀█████▀▀██  ${bluef} ██▀▀█████▀▀██  ${purplef} ██▀▀█████▀▀██  ${cyanf} ██▀▀█████▀▀██ 
+${redf} ▀█▄  ▀▀▀  ▄█▀  ${yellowf} ▀█▄  ▀▀▀  ▄█▀  ${bluef} ▀█▄  ▀▀▀  ▄█▀  ${purplef} ▀█▄  ▀▀▀  ▄█▀  ${cyanf} ▀█▄  ▀▀▀  ▄█▀ 
+${redf}   ▀█     █▀    ${yellowf}   ▀▀     ▀▀    ${bluef}   ▀▀     ▀▀    ${purplef}   ▀▀     ▀▀    ${cyanf}   ▀█     █▀   
  
 EOF

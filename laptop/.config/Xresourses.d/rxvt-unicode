@@ -1,5 +1,5 @@
 ! URxvt.
-#define FONT_SIZE 19
+#define FONT_SIZE 18
 
 
 !URxvt.modifier              : meta
@@ -66,11 +66,11 @@ URxvt.geometry: 145x45
 !URxvt.letterSpace: -1
 
 !!DejaVu Sans
-!URxvt.font: xft:Dejavu Sans Mono for Powerline:pixelsize=16:antialias=true:hinting=true
-!URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:bold:pixelsize=16:antialias=true:hinting=true
-!URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:italic:pixelsize=16:antialias=true:hinting=true
-!URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:pixelsize=16:antialias=true
-!URxvt.letterSpace: -1
+URxvt.font: xft:Dejavu Sans Mono for Powerline:pixelsize=FONT_SIZE:antialias=true:hinting=true
+URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:bold:pixelsize=FONT_SIZE:antialias=true:hinting=true
+URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:italic:pixelsize=FONT_SIZE:antialias=true:hinting=true
+URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:pixelsize=FONT_SIZE:antialias=true
+URxvt.letterSpace: -1
 
 !!!Droid Sans
 !URxvt.font: xft:Droid Sans Mono for Powerline:pixelsize=20:antialias=true:hinting=true
@@ -122,11 +122,11 @@ URxvt.geometry: 145x45
 !URxvt.letterSpace: -1
 
 !!!DejaVu Sans
-URxvt.font: xft:Dejavu Sans Mono:pixelsize=FONT_SIZE:antialias=true:hinting=true
-URxvt.boldFont: xft:DejaVu Sans Mono:bold:pixelsize=FONT_SIZE:antialias=true:hinting=true
-URxvt.italicFont: xft:DejaVu Sans Mono:italic:pixelsize=FONT_SIZE:antialias=true:hinting=true
-URxvt.boldItalicFont: xft:DejaVu Sans Mono:bold:italic:pixelsize=FONT_SIZE:antialias=true
-URxvt.letterSpace: -1
+!URxvt.font: xft:Dejavu Sans Mono:pixelsize=FONT_SIZE:antialias=true:hinting=true
+!URxvt.boldFont: xft:DejaVu Sans Mono:bold:pixelsize=FONT_SIZE:antialias=true:hinting=true
+!URxvt.italicFont: xft:DejaVu Sans Mono:italic:pixelsize=FONT_SIZE:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:DejaVu Sans Mono:bold:italic:pixelsize=FONT_SIZE:antialias=true
+!URxvt.letterSpace: -1
 !
 !
 !
