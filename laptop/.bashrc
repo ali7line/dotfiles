@@ -1,6 +1,10 @@
 
 # ~/.bashrc
 #
+if [ -f ~/.bash_env ]; then
+    . ~/.bash_env
+fi
+
 export MPD_PORT=6601
 export PHANTOMJS_BIN=~/bin/phantomjs
 export VISUAL=vim
@@ -44,6 +48,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
 
 # Sets the Mail Environment Variable
 MAIL=/var/spool/mail/gpu && export MAIL
