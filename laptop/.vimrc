@@ -19,9 +19,9 @@ execute pathogen#infect()
 let mapleader = ","
 let maplocalleader = "-"
 " Bind nohl
-noremap <C-n> :nohl<CR>
-vnoremap <C-n> :nohl<CR>
-inoremap <C-n> :nohl<CR>
+noremap <C-h> :nohl<CR>
+vnoremap <C-h> :nohl<CR>
+inoremap <C-h> :nohl<CR>
 
 " Quicksave command
 noremap <C-Z> :update<CR><ESC>
@@ -47,23 +47,23 @@ set listchars=eol:¬,tab:▸\
 ",trail:~,extends:>,precedes:<
 
 " keys to move around the windows
-map <c-j> <c-w>j map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
+"map <c-j> <c-w>j map <c-k> <c-w>k
+"map <c-l> <c-w>l
+"map <c-h> <c-w>h
 
 " easier moving between tabs
-map <Leader>n <esc>:tabprevious<CR>
-map <Leader>m <esc>:tabnext<CR>
+"map <Leader>n <esc>:tabprevious<CR>
+"map <Leader>m <esc>:tabnext<CR>
 
 " map sort function to a key
-vnoremap <Leader>s :sort<CR>
+"vnoremap <Leader>s :sort<CR>
 
 " easier moving of code blocks
 vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentation
 
-" base-config =================================================================
-" disable backup and swap files
+"" base-config =================================================================
+"" disable backup and swap files
 set nobackup
 set nowritebackup
 set noswapfile
@@ -161,17 +161,17 @@ set smartcase
 " it is next to ``m`` and ``n`` which I use for navigating between tabs.
 
 
-" NERDTree ====================================================================
-nmap <silent> <C-h> :NERDTreeToggle<CR>
-
+"" NERDTree ====================================================================
+"nmap <silent> <C-h> :NERDTreeToggle<CR>
+"
 " FLAKE8 ======================================================================
-let g:flake8_show_in_file = 1 " highlights text
-let g:flake8_show_in_gutter = 1 " highlights gutter 
-let g:flake8_quickfix_height=7
-"let g:flake8_quickfix_location="topleft"
-"autocmd BufWritePost *.py call Flake8()
-"autocmd! BufRead,BufWritePost *.py call Flake8()
-
+"let g:flake8_show_in_file = 1 " highlights text
+"let g:flake8_show_in_gutter = 1 " highlights gutter 
+"let g:flake8_quickfix_height=7
+""let g:flake8_quickfix_location="topleft"
+""autocmd BufWritePost *.py call Flake8()
+""autocmd! BufRead,BufWritePost *.py call Flake8()
+"
 " Jedi ========================================================================
 "autocmd FileType python setlocal completeopt-=preview
 "let g:jedi#completions_enabled = 0
@@ -187,66 +187,74 @@ let g:jedi#completions_command = "jj"
 let g:jedi#rename_command = "<leader>r"
 "
 
-" Supertab ====================================================================
-let g:SuperTabDefaultCompletionType = "<c-n>"
-
-" ctrlp =======================================================================
+"" Supertab ====================================================================
+let g:SuperTabDefaultCompletionType = "<c-s>"
+"
+"" ctrlp =======================================================================
 let g:ctrlp_max_height = 7
 set wildignore+=*.pyc
 set wildignore+=*_build/*
 set wildignore+=*/coverage/*
+"
+"" UltiSnip =======================================================================
+"let g:UltiSnipsSnippetDirectories = ["~/dotfiles/laptop/.vim/UltiSnips"]
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsListSnippets = "<c-tab>"
+let g:UltiSnipsEditSplit = "horizontal"
+let g:UltiSnipsJumpForwardTrigger = "<c-j>"
+"let g:UltiSnipsJumpBackwardTrigger = "<c-n>"
 
-" dump-configs ================================================================
-" Settings for python-mode
-"map <Leader>g :call RopeGotoDefinition()<CR>
-"let ropevim_enable_shortcuts = 1
-"let g:pymode_rope_goto_def_newwin = "vnew"
-":::let g:pymode_rope_extended_complete = 1
-"let g:pymode_rope_complete_on_dot = 0
-":::let g:pymode_syntax = 1
-"let g:pymode_rope = 0
-"let g:pymode_breakpoint = 0
-":::let g:pymode_syntax_builtin_objs = 0
-":::let g:pymode_syntax_builtin_funcs = 0
-":::set completeopt=menu "disable auto load doc window
-"map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
-
-"nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
-"let g:ycm_autoclose_preview_window_after_completion=1
-"let g:jedi#usages_command = "<leader>p"
-"let g:jedi#popup_on_dot = 0
-"let g:jedi#popup_select_first = 0
-"map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
-" Better navigating through omnicomplete option list
-" See http://stackoverflow.com/questions/2170023/how-to-map-keys-for-popup-menu-in-vim
-"set completeopt=longest,menuone
-"function! OmniPopup(action)
-"    if pumvisible()
-"        if a:action == 'j'
-"            return "\<C-N>"
-"        elseif a:action == 'k'
-"            return "\<C-P>"
-"        endif
-"    endif
-"    return a:action
-"endfunction
-""
-"inoremap <silent><C-j> <C-R>=OmniPopup('j')<CR>
-"inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
-"function! InsertTabWrapper(direction)                                                                                                         
-"    let col = col('.') - 1                                                                                                                    
-"    if !col || getline('.')[col - 1] !~ '\k'                                                                                                  
-"       return "\<tab>"                                                                                                                        
-"    elseif "backward" == a:direction                                                                                                          
-"       return "\<c-p>"                                                                                                                        
-"    else                                                                                                                                      
-"       return "\<c-n>"                                                                                                                        
-"    endif                                                                                                                                     
-"endfunction                                                                                                                                   
-"inoremap <tab> <c-r>=InsertTabWrapper ("forward")<cr>                                                                                         
-"inoremap <s-tab> <c-r>=InsertTabWrapper ("backward")<cr> 
-
-" Python folding
-" mkdir -p ~/.vim/ftplugin
-" wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
-"set nofoldenable
+"" dump-configs ================================================================
+"" Settings for python-mode
+""map <Leader>g :call RopeGotoDefinition()<CR>
+""let ropevim_enable_shortcuts = 1
+""let g:pymode_rope_goto_def_newwin = "vnew"
+"":::let g:pymode_rope_extended_complete = 1
+""let g:pymode_rope_complete_on_dot = 0
+"":::let g:pymode_syntax = 1
+""let g:pymode_rope = 0
+""let g:pymode_breakpoint = 0
+"":::let g:pymode_syntax_builtin_objs = 0
+"":::let g:pymode_syntax_builtin_funcs = 0
+"":::set completeopt=menu "disable auto load doc window
+""map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
+"
+""nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+""let g:ycm_autoclose_preview_window_after_completion=1
+""let g:jedi#usages_command = "<leader>p"
+""let g:jedi#popup_on_dot = 0
+""let g:jedi#popup_select_first = 0
+""map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
+"" Better navigating through omnicomplete option list
+"" See http://stackoverflow.com/questions/2170023/how-to-map-keys-for-popup-menu-in-vim
+""set completeopt=longest,menuone
+""function! OmniPopup(action)
+""    if pumvisible()
+""        if a:action == 'j'
+""            return "\<C-N>"
+""        elseif a:action == 'k'
+""            return "\<C-P>"
+""        endif
+""    endif
+""    return a:action
+""endfunction
+"""
+""inoremap <silent><C-j> <C-R>=OmniPopup('j')<CR>
+""inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
+""function! InsertTabWrapper(direction)                                                                                                         
+""    let col = col('.') - 1                                                                                                                    
+""    if !col || getline('.')[col - 1] !~ '\k'                                                                                                  
+""       return "\<tab>"                                                                                                                        
+""    elseif "backward" == a:direction                                                                                                          
+""       return "\<c-p>"                                                                                                                        
+""    else                                                                                                                                      
+""       return "\<c-n>"                                                                                                                        
+""    endif                                                                                                                                     
+""endfunction                                                                                                                                   
+""inoremap <tab> <c-r>=InsertTabWrapper ("forward")<cr>                                                                                         
+""inoremap <s-tab> <c-r>=InsertTabWrapper ("backward")<cr> 
+"
+"" Python folding
+"" mkdir -p ~/.vim/ftplugin
+"" wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
+""set nofoldenable

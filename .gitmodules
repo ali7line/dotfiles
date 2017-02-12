@@ -19,3 +19,6 @@
 [submodule "laptop/.vim/bundle/jedi-vim"]
 	path = laptop/.vim/bundle/jedi-vim
 	url = http://github.com/davidhalter/jedi-vim
+[submodule "laptop/.vim/bundle/ultisnips"]
+	path = laptop/.vim/bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips
