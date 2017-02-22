@@ -5,6 +5,7 @@ xset b off
 # setup urxvtd
 urxvtd -q -f -o
 # setup urxvtd
+unclutter &
 xrdb ~/.Xresources
 
 setxkbmap -option caps:super
