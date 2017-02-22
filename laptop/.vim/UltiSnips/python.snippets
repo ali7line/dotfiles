@@ -238,4 +238,41 @@ from collections import OrderedDict
 
 d = OrderedDict()
 endsnippet
+
+snippet jsondump "creates a json string from variable" b
+import json
+json.dump(${1:variable}
+endsnippet
+
+############
+#  RANDOM  #
+############
+snippet randomrandom "gives a random number between 0-1" b
+import random
+r = random.random()
+endsnippet
+
+snippet randomint "gives a random number in range" b
+import random
+r = random.randint(0,10)
+endsnippet
+
+snippet randomshuffle "suffles variable in list" b
+import random
+v = range(1,10)
+r = random.shuffle(v)
+endsnippet
+
+snippet randomchoice "gets one variable from list" b
+import random
+v = range(1,10)
+r = random.choice(v)
+endsnippet
+
+snippet randomsample "gets N variable from list" b
+import random
+v = range(1,10)
+r = random.sample(v, ${1:N})
+endsnippet
+
 # vim:ft=snippets:
