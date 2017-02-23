@@ -1,0 +1,13 @@
+#!/bin/bash
+[ ! -d /tmp/king110 ] && mkdir /tmp/king110
+pwd > /tmp/$USER/CD_SAVED
+
+if [ -z $VIRTUAL_ENV ]
+    then
+        #echo "VE is not set"
+        rm /tmp/$USER/ENV_SAVED
+    else
+        #VE is  set
+        _env=$(basename $VIRTUAL_ENV)
+        echo $_env > /tmp/$USER/ENV_SAVED
+fi

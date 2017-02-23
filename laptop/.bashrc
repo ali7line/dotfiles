@@ -175,6 +175,7 @@ function tmuxopen () {
 TMUX_BACK=$TMUX
 
 #if which ruby >/dev/null && which gem >/dev/null; then PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH" fi
+[ ! -d /tmp/$USER ] && mkdir /tmp/$USER
 
 #setxkbmap -option  caps:super
 $(~/scripts/banner/randomBanner.py)
