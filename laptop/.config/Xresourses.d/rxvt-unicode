@@ -135,7 +135,7 @@ URxvt.letterSpace: -1
 !URxvt.print-pipe: "cat >/dev/null"
 !
 !URxvt.perl-ext-common : default,keyboard-select,url-select,clipboard
-URxvt.perl-ext-common           : default,url-select,keyboard-select
+URxvt.perl-ext-common           : default,url-select,keyboard-select,selection-to-clipboard
 !URxvt.url-launcher              : qutebrowser
 !URxvt.matcher.button            : 1
 
