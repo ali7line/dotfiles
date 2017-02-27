@@ -1,5 +1,5 @@
 snippet dextend
-{% extends "${1:base.html}" %}
+{% extends parent_template|default:"${0}base.html" %}
 endsnippet
 
 snippet dblock

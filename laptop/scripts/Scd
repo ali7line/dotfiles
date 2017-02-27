@@ -5,7 +5,7 @@ pwd > /tmp/$USER/CD_SAVED
 if [ -z $VIRTUAL_ENV ]
     then
         #echo "VE is not set"
-        rm /tmp/$USER/ENV_SAVED
+        [ -f /tmp/$USER/ENV_SAVED ] && rm /tmp/$USER/ENV_SAVED
     else
         #VE is  set
         _env=$(basename $VIRTUAL_ENV)

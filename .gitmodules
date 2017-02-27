@@ -22,3 +22,6 @@
 [submodule "laptop/.vim/bundle/ultisnips"]
 	path = laptop/.vim/bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips
+[submodule "laptop/.vim/bundle/auto-pairs"]
+	path = laptop/.vim/bundle/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
