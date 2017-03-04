@@ -1,3 +1,15 @@
+################################### MODELS
+snippet mclass
+class ${1}(models.Model):
+	name = models.CharField(max_length=31)
+	${0}
+	def __str__(self):
+		return self.name
+	class Meta:
+		ordering = ['name']
+
+endsnippet
+
 snippet cf
 models.CharField(max_length=31)
 endsnippet 
@@ -30,15 +42,36 @@ snippet fk
 models.ForeignKey(${0})
 endsnippet 
 
-snippet mclass
-class ${1}(models.Model):
-	name = models.CharField(max_length=31)
-	${0}
-	def __str__(self):
-		return self.name
+################################### FROMS
+snippet fclass
+class ${0}(forms.ModelForm):
 	class Meta:
-		ordering = ['name']
-
-
+		model = ${1}
+		fields = '__all__'
 
 endsnippet
+
+snippet fcf
+forms.CharField(max_length=31)
+endsnippet 
+
+snippet ftf
+forms.TextField()
+endsnippet 
+
+snippet fdf
+forms.DateField()
+endsnippet 
+
+snippet fsf
+forms.SlugField(max_length=31)
+endsnippet 
+
+snippet fuf
+forms.URLField(max_length=255)
+endsnippet 
+
+snippet fef
+forms.EmailField(max_length=255)
+endsnippet 
+
