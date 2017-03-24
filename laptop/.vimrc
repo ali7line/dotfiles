@@ -204,6 +204,8 @@ let g:UltiSnipsEditSplit = "horizontal"
 let g:UltiSnipsJumpForwardTrigger = "<c-j>"
 "let g:UltiSnipsJumpBackwardTrigger = "<c-n>"
 
+"" Powerline 
+let g:powerline_pycmd = "py3"
 "" dump-configs ================================================================
 "" Settings for python-mode
 ""map <Leader>g :call RopeGotoDefinition()<CR>
