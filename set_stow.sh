@@ -11,3 +11,4 @@ stow redshift/
 stow scripts/
 stow tmux/
 stow vim/
+stow mpv/
