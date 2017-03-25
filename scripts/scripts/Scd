@@ -1,5 +1,5 @@
 #!/bin/bash
-[ ! -d /tmp/king110 ] && mkdir /tmp/king110
+[ ! -d /tmp/$USER ] && mkdir /tmp/$USER
 pwd > /tmp/$USER/CD_SAVED
 
 if [ -z $VIRTUAL_ENV ]

@@ -23,8 +23,8 @@ function _color_compare() {
 }
 
 function _get_ping() {
-    recent_ping=$(grep $1 /home/king110/log/ping_host.log| tail -1 | awk '{print $7}')
-    previous_ping=$(grep $1 /home/king110/log/ping_host.log| tail -2 | head -1  | awk '{print $7}')
+    recent_ping=$(grep $1 /home/$USER/log/ping_host.log| tail -1 | awk -F'[ =]' '{print $11}')
+    previous_ping=$(grep $1 /home/$USER/log/ping_host.log| tail -2 | head -1  | awk -F'[ =]' '{print $11}')
 
     printf -v recent_ping '%d\n' $recent_ping 2>/dev/null
     printf -v previous_ping '%d\n' $previous_ping 2>/dev/null
