@@ -1,5 +1,4 @@
 git submodule add http://github.com/kien/ctrlp.vim vim/.vim/bundle/ctrlp.vim
-git submodule add http://github.com/Lokaltog/vim-powerline vim/.vim/bundle/vim-powerline
 git submodule add http://github.com/Yggdroot/indentLine vim/.vim/bundle/indentLine
 git submodule add http://github.com/nvie/vim-flake8 vim/.vim/bundle/vim-flake8
 git submodule add http://github.com/scrooloose/nerdtree vim/.vim/bundle/nerdtree
