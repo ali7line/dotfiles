@@ -1,9 +1,6 @@
 [submodule "vim/.vim/bundle/ctrlp.vim"]
 	path = vim/.vim/bundle/ctrlp.vim
 	url = http://github.com/kien/ctrlp.vim
-[submodule "vim/.vim/bundle/vim-powerline"]
-	path = vim/.vim/bundle/vim-powerline
-	url = http://github.com/Lokaltog/vim-powerline
 [submodule "vim/.vim/bundle/indentLine"]
 	path = vim/.vim/bundle/indentLine
 	url = http://github.com/Yggdroot/indentLine
