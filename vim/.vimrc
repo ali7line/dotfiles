@@ -42,7 +42,7 @@ noremap <Leader>l :IndentLinesToggle<CR>
 
 " char u00ac ¬
 " char u25b8 ▸
-set listchars=eol:¬,tab:▸\ 
+"set listchars=eol:¬,tab:▸\ 
 "let g:indentLine_char = '▸'
 ",trail:~,extends:>,precedes:<
 
