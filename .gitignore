@@ -28,3 +28,4 @@ laptop/.config/deluge/gtkui.conf
 laptop/.vim/.netrwhist
 laptop/bin/phantomjs
 gtkui.conf
+qsettings/

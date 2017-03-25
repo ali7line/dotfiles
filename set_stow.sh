@@ -1,5 +1,5 @@
 #!/bin/bash
-stow -d qutebrowser/ -t $HOME qutebrowser-0.10 
+stow -d qutebrowser/ -t $HOME qutebrowser-0.10.1
 stow -d awesome/ -t $HOME awesome-4.0
 stow bash/
 stow config/
