@@ -1,6 +1,6 @@
 [user]
-	email = "king110.py@gmail.com"
-	name = "Alex King"
+	email = "soltani.110@gmail.com"
+	name = "ali7line"
 [alias]
 	tree = log --graph --decorate --pretty=oneline \n--abbrev-commit
 [core]
