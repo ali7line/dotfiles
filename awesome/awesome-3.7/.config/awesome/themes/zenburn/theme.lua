@@ -12,7 +12,7 @@ theme.wallpaper = "~/.config/awesome/themes/zenburn/wallpaper/zenburn-background
 -- }}}
 
 -- {{{ Styles
-theme.font      = "sans 8"
+theme.font      = "sans 10"
 
 -- {{{ Colors
 theme.fg_normal  = "#DCDCCC"
