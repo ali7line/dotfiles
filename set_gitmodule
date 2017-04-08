@@ -1,7 +1,9 @@
+#!/bin/bash
 git submodule add http://github.com/kien/ctrlp.vim vim/.vim/bundle/ctrlp.vim
 git submodule add http://github.com/Yggdroot/indentLine vim/.vim/bundle/indentLine
 git submodule add http://github.com/nvie/vim-flake8 vim/.vim/bundle/vim-flake8
 git submodule add http://github.com/scrooloose/nerdtree vim/.vim/bundle/nerdtree
 git submodule add http://github.com/ervandew/supertab vim/.vim/bundle/supertab
 git submodule add http://github.com/davidhalter/jedi-vim vim/.vim/bundle/jedi-vim
+git submodule add http://github.com/SirVer/ultisnips vim/.vim/bundle/ultisnips --force
 git submodule update --init --recursive

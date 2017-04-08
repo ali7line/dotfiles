@@ -1,19 +1,19 @@
 ############
 #  HEADER  #
 ############
-snippet #! "python header" A
+snippet #! "python header" 
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 $0
 endsnippet
 
-snippet #!2 "python2 header" A
+snippet #!2 "python2 header" 
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 $0
 endsnippet
 
-snippet #!3 "python3 header" A
+snippet #!3 "python3 header" 
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 $0
@@ -273,6 +273,12 @@ snippet randomsample "gets N variable from list" b
 import random
 v = range(1,10)
 r = random.sample(v, ${1:N})
+endsnippet
+
+################
+snippet main_
+if __name__ == '__main__':
+	${0}
 endsnippet
 
 # vim:ft=snippets:
