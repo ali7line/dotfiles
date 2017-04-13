@@ -1,6 +1,7 @@
 #!/bin/bash
 stow -d qutebrowser/ -t $HOME qutebrowser-0.9
 stow -d awesome/ -t $HOME awesome-3.7
+stow -d terminator/ -t $HOME laptop
 stow bash/
 stow config/
 stow fonts/
