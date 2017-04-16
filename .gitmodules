@@ -22,3 +22,6 @@
 [submodule "vim/.vim/bundle/ultisnips"]
 	path = vim/.vim/bundle/ultisnips
 	url = http://github.com/SirVer/ultisnips
+[submodule "zsh/.config/oh-my-zsh"]
+	path = zsh/.config/oh-my-zsh
+	url = http://github.com/robbyrussell/oh-my-zsh
