@@ -83,3 +83,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+if [ -f ~/.shell_aliases ]; then
+    source ~/.shell_aliases
+fi
+
+if [ -f ~/.shell_env ]; then
+    source ~/.shell_env
+fi

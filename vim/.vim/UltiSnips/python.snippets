@@ -281,4 +281,83 @@ if __name__ == '__main__':
 	${0}
 endsnippet
 
-# vim:ft=snippets:
+############
+#  DJANGO  #
+############
+################################### MODELS
+snippet mclass
+class ${1}(models.Model):
+	name = models.CharField(max_length=31)
+	${0}
+	def __str__(self):
+		return self.name
+	class Meta:
+		ordering = ['name']
+
+endsnippet
+
+snippet cf
+models.CharField(max_length=31)
+endsnippet 
+
+snippet tf
+models.TextField()
+endsnippet 
+
+snippet df
+models.DateField()
+endsnippet 
+
+snippet sf
+models.SlugField(max_length=31)
+endsnippet 
+
+snippet uf
+models.URLField(max_length=255)
+endsnippet 
+
+snippet ef
+models.EmailField(max_length=255)
+endsnippet 
+
+snippet mm
+models.ManyToManyField(${0})
+endsnippet 
+
+snippet fk
+models.ForeignKey(${0})
+endsnippet 
+
+################################### FROMS
+snippet fclass
+class ${0}(forms.ModelForm):
+	class Meta:
+		model = ${1}
+		fields = '__all__'
+
+endsnippet
+
+snippet fcf
+forms.CharField(max_length=31)
+endsnippet 
+
+snippet ftf
+forms.TextField()
+endsnippet 
+
+snippet fdf
+forms.DateField()
+endsnippet 
+
+snippet fsf
+forms.SlugField(max_length=31)
+endsnippet 
+
+snippet fuf
+forms.URLField(max_length=255)
+endsnippet 
+
+snippet fef
+forms.EmailField(max_length=255)
+endsnippet 
+

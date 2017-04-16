@@ -1,5 +1,5 @@
 ##### connection settings #####
-lyrics_directory = "/home/$USER/.ncmpcpp/lyrics"
+lyrics_directory = "/home/king110/.ncmpcpp/lyrics"
 mpd_host = "127.0.0.1"
 mpd_port = "6601"
 mpd_music_dir = "/home/$USER/music"
