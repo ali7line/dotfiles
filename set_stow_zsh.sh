@@ -6,9 +6,7 @@ stow -d qutebrowser/ -t $HOME qutebrowser-0.10.1
 # check what awesomeWM version is installed
 stow -d awesome/ -t $HOME awesome-4.0
 
-stow -d terminator/ -t $HOME desktop
-
-stow bash/
+stow zsh/
 stow main_shell/
 
 stow config/

@@ -145,6 +145,7 @@ set ignorecase
 set smartcase
 
 
+
 "nnoremap <space> za
 
 " Better copy & paste

@@ -1,0 +1,31 @@
+export MPD_PORT=6601
+export PHANTOMJS_BIN=~/bin/phantomjs
+export VISUAL=vim
+export TERM=xterm-256color
+export HISTFILE=$HOME/.bash_history
+export PATH=~/bin:$PATH
+export PATH=~/scripts:$PATH
+export PATH=~/scripts/control:$PATH
+export PATH=~/funcs:$PATH
+export WEECHAT_HOME=$HOME/.config/weechat
+export WORKON_HOME=$HOME/.local/virtualenv 
+
+
+if [ -f /usr/bin/virtualenvwrapper.sh ]; then
+    source /usr/bin/virtualenvwrapper.sh
+fi
+
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+#if which ruby >/dev/null && which gem >/dev/null; then PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH" fi
+[ ! -d /tmp/$USER ] && mkdir /tmp/$USER
+
+#setxkbmap -option  caps:super
+$(~/scripts/banner/randomBanner.py)
