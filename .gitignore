@@ -30,3 +30,4 @@ laptop/bin/phantomjs
 gtkui.conf
 qsettings/
 chromedriver
+phantomjs
