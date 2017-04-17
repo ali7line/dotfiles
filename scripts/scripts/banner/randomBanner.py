@@ -13,4 +13,5 @@ for f in os.listdir(where_am_i):
     if type(mo) is not types.NoneType:
         fileList.append(mo.string)
 
-print(where_am_i+'/'+random.choice(fileList))
+#print(where_am_i+'/'+random.choice(fileList))
+print(where_am_i+'/'+'eyes.sh')
