@@ -18,7 +18,7 @@
 	url = http://github.com/davidhalter/jedi-vim
 [submodule "vim/.vim/bundle/auto-pairs"]
 	path = vim/.vim/bundle/auto-pairs
-	url = https://github.com/jiangmiao/auto-pairs.git
+	url = https://github.com/jiangmiao/auto-pairs
 [submodule "vim/.vim/bundle/ultisnips"]
 	path = vim/.vim/bundle/ultisnips
 	url = http://github.com/SirVer/ultisnips

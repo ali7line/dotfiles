@@ -239,10 +239,6 @@ from collections import OrderedDict
 d = OrderedDict()
 endsnippet
 
-snippet jsondump "creates a json string from variable" b
-import json
-json.dump(${1:variable}
-endsnippet
 
 ############
 #  RANDOM  #
@@ -361,3 +357,59 @@ snippet fef
 forms.EmailField(max_length=255)
 endsnippet 
 
+##############
+#  CVS/JSON  #
+##############
+snippet jsondump "creates a json string from variable" b
+import json
+json.dump(${1:variable}
+endsnippet
+
+snippet rjson "reads a json file" b
+import csv
+
+with open('filename.json', 'r') as f:
+    date = json.loads(f.read())
+
+for item in data:
+    print(item)
+endsnippet
+
+snippet rcsv "reads a csv file" b
+import csv
+
+with open('filename.csv', 'rb') as f:
+    # reader = csv.DictReader(f)
+    reader = csv.reader(f)
+    for row in reader:
+        print(row)
+endsnippet
+
+snippet rexcel "reads excell file" b
+import xlrd
+import pprint
+
+book = xlrd.open_workbook('su.xlsx')
+sheet = book.sheet_by_index(1)
+
+data = {}
+for i in range(14, sheet.nrows):
+    row = sheet.row_values(i)
+    country = row[1]
+    data[country] = {
+            'child_labor': {
+                'total': [row[4], row[5]],
+                'male': [row[6], row[7]],
+                'female': [row[8], row[9]],
+                },
+            'child_marraige':{
+                'married_by_15': row[10],
+                'married_by_18': row[12],
+                }
+            }
+
+    if country == 'Zimbabwe':
+        break
+
+pprint.pprint(data)
+endsnippet

@@ -1,5 +1,7 @@
 #!/bin/bash
 git submodule add http://github.com/robbyrussell/oh-my-zsh zsh/.config/oh-my-zsh
+
+git submodule add https://github.com/jiangmiao/auto-pairs vim/.vim/bundle/auto-pairs
 git submodule add http://github.com/kien/ctrlp.vim vim/.vim/bundle/ctrlp.vim
 git submodule add http://github.com/Yggdroot/indentLine vim/.vim/bundle/indentLine
 git submodule add http://github.com/nvie/vim-flake8 vim/.vim/bundle/vim-flake8
