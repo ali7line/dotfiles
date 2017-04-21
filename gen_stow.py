@@ -2,7 +2,7 @@ import os
 
 def stow(dir_):
     print('\t* Stowing' ,dir_)
-    return 'stow {}'.format(dir_)
+    return 'stow {}\n'.format(dir_)
 
 def version_stow(dir_):
     versions = next(os.walk(dir_))[1]
@@ -14,7 +14,7 @@ def version_stow(dir_):
     user_choice = versions[user_input]
     print('\t* Stowing', user_choice)
 
-    return 'stow -d {} -t $HOME {}'.format(dir_, user_choice)
+    return 'stow -d {} -t $HOME {}\n'.format(dir_, user_choice)
     
 
 with open('stow_all.bash', 'wt') as f:
