@@ -31,3 +31,4 @@ gtkui.conf
 qsettings/
 chromedriver
 phantomjs
+stow*

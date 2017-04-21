@@ -25,3 +25,6 @@
 [submodule "zsh/.config/oh-my-zsh"]
 	path = zsh/.config/oh-my-zsh
 	url = http://github.com/robbyrussell/oh-my-zsh
+[submodule "shell-/shell-zsh/.config/oh-my-zsh"]
+	path = shell-/shell-zsh/.config/oh-my-zsh
+	url = http://github.com/robbyrussell/oh-my-zsh
