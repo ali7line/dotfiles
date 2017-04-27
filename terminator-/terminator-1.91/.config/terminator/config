@@ -14,7 +14,7 @@
   [[default]]
     background_darkness = 0.09
     cursor_color = "#aaaaaa"
-    font = DejaVu Sans Mono for Powerline 15
+    font = DejaVu Sans Mono for Powerline 12
     scrollback_infinite = True
     scrollbar_position = hidden
     show_titlebar = False
