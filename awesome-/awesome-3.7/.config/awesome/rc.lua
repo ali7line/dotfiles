@@ -230,9 +230,13 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "-", function () awful.util.spawn("amixer sset Master 10%-") end),
     awful.key({ modkey,           }, "=", function () awful.util.spawn("amixer sset Master 10%+") end),
 
+    -- screen lock
+    awful.key({ modkey,           }, "F12", function () awful.util.spawn("slock") end),
+
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "`", awful.tag.history.restore),
+    
 
     awful.key({ modkey,           }, "j",
         function ()
