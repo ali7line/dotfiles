@@ -1,3 +1,7 @@
+snippet durl
+{% url '${0}' %}
+endsnippet
+
 snippet dempty
 {% empty %}
 ${0}
@@ -51,11 +55,34 @@ ${0}
 </article>
 endsnippet
 
+snippet input
+<input id="name" maxlength="31" name="name" type="text" />
+endsnippet
+
+snippet label
+<label for=""> ${0} </label>
+endsnippet
 
 snippet section
 <section>
 ${0}
 </section>
+endsnippet
+
+snippet form
+<form action="" method="POST">
+${0}
+</form>
+endsnippet
+
+snippet button
+<button type="submit">
+${0}
+</button>
+endsnippet
+
+snippet em
+<em> ${0} </em>
 endsnippet
 
 snippet header
@@ -316,6 +343,14 @@ endsnippet
 
 snippet span
 <span>  </span>
+endsnippet
+
+snippet nav
+<nav>
+<ul>
+<li> </li>
+</ul>
+</nav>
 endsnippet
 
 snippet span.badge

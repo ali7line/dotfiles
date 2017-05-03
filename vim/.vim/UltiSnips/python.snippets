@@ -292,6 +292,14 @@ class ${1}(models.Model):
 
 endsnippet
 
+snippet if
+models.IntegerField(max_length=255)
+endsnippet 
+
+snippet bf
+models.BooleanField(max_length=255)
+endsnippet 
+
 snippet cf
 models.CharField(max_length=31)
 endsnippet 
@@ -333,28 +341,32 @@ class ${0}(forms.ModelForm):
 
 endsnippet
 
-snippet fcf
+snippet cff
 forms.CharField(max_length=31)
 endsnippet 
 
-snippet ftf
+snippet tff
 forms.TextField()
 endsnippet 
 
-snippet fdf
+snippet dff
 forms.DateField()
 endsnippet 
 
-snippet fsf
+snippet sff
 forms.SlugField(max_length=31)
 endsnippet 
 
-snippet fuf
+snippet uff
 forms.URLField(max_length=255)
 endsnippet 
 
-snippet fef
+snippet eff
 forms.EmailField(max_length=255)
+endsnippet 
+
+snippet iff
+forms.IntegerField(max_length=255)
 endsnippet 
 
 ##############
