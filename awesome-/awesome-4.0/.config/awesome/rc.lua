@@ -1,20 +1,3 @@
--- local function press_t()
---    local double_tap_timer = nil
---
---    if double_tap_timer then
---        double_tap_timer:stop()
---        double_tap_timer = nil
---        print("we got a double tap")
---        return
---    end
---
---    double_tap_timer = gears.timer.start_new(0.1, function()
---        double_tap_timer = nil
---        print("We got single tap")
---        return false
---    end)
---end
-
 -- Standard awesome library
 local awful = require("awful")
 local gears = require("gears")
@@ -35,18 +18,22 @@ local function press_t()
         double_tap_timer:stop()
         double_tap_timer = nil
         awful.util.spawn("mpc --port 6601 seek 0%")
-        naughty.notify({ preset = naughty.config.presets.info,
-        title = "Going to begining!",
-        text = "We got a double ]" })
+        naughty.notify({ 
+            text = "MPC: going to begining!",
+            icon = os.getenv("HOME").."/.config/awesome/icons/mpd.png",
+            icon_size = 20,
+        })
         return true
     end
 
     double_tap_timer = gears.timer.weak_start_new(1, function()
         double_tap_timer = nil
         awful.util.spawn("mpc --port 6601 play")
-        naughty.notify({ preset = naughty.config.presets.info,
-        title = "k!",
-        text = "We got a single tag" })
+        naughty.notify({ 
+            text = "MPC: Play!",
+            icon = os.getenv("HOME").."/.config/awesome/icons/mpd.png",
+            icon_size = 20,
+        })
         return false
     end)
 end
