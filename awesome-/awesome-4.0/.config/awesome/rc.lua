@@ -1,6 +1,23 @@
+-- local function press_t()
+--    local double_tap_timer = nil
+--
+--    if double_tap_timer then
+--        double_tap_timer:stop()
+--        double_tap_timer = nil
+--        print("we got a double tap")
+--        return
+--    end
+--
+--    double_tap_timer = gears.timer.start_new(0.1, function()
+--        double_tap_timer = nil
+--        print("We got single tap")
+--        return false
+--    end)
+--end
+
 -- Standard awesome library
-local gears = require("gears")
 local awful = require("awful")
+local gears = require("gears")
 require("awful.autofocus")
 -- Widget and layout library
 local wibox = require("wibox")
@@ -10,6 +27,29 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
+
+-- my test function
+local double_tap_timer = nil
+local function press_t()
+    if double_tap_timer then
+        double_tap_timer:stop()
+        double_tap_timer = nil
+        awful.util.spawn("mpc --port 6601 seek 0%")
+        naughty.notify({ preset = naughty.config.presets.info,
+        title = "Going to begining!",
+        text = "We got a double ]" })
+        return true
+    end
+
+    double_tap_timer = gears.timer.weak_start_new(1, function()
+        double_tap_timer = nil
+        awful.util.spawn("mpc --port 6601 play")
+        naughty.notify({ preset = naughty.config.presets.info,
+        title = "k!",
+        text = "We got a single tag" })
+        return false
+    end)
+end
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -237,9 +277,10 @@ globalkeys = awful.util.table.join(
 
     -- mpd control
     awful.key({ modkey,           }, "[", function () awful.util.spawn("mpc --port 6601 pause") end),
-    awful.key({ modkey,           }, "]", function () awful.util.spawn("mpc --port 6601 play") end),
+    -- awful.key({ modkey,           }, "]", function () awful.util.spawn("mpc --port 6601 play") end),
     awful.key({ modkey,           }, "\\", function () awful.util.spawn("mpc --port 6601 next") end),
     awful.key({ modkey, "Shift"   }, "\\", function () awful.util.spawn("mpc --port 6601 pre") end),
+    awful.key({ modkey,           }, "]", press_t),
 
     -- vol control
     awful.key({ modkey,           }, "-", function () awful.util.spawn("amixer sset Master 10%-") end),
