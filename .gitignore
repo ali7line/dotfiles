@@ -32,3 +32,4 @@ qsettings/
 chromedriver
 phantomjs
 stow*
+vim/.vim/plugged
