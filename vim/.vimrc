@@ -22,6 +22,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sensible'
 Plug 'vim-syntastic/syntastic'
+Plug 'jiangmiao/auto-pairs'
 
 "
 " " On-demand loading
@@ -87,6 +88,7 @@ noremap <Leader>l :IndentLinesToggle<CR>
 "let g:indentLine_char = '▸'
 ",trail:~,extends:>,precedes:<
 
+
 " keys to move around the windows
 "map <c-j> <c-w>j map <c-k> <c-w>k
 "map <c-l> <c-w>l
@@ -97,7 +99,7 @@ noremap <Leader>l :IndentLinesToggle<CR>
 "map <Leader>m <esc>:tabnext<CR>
 
 " map sort function to a key
-"vnoremap <Leader>s :sort<CR>
+vnoremap <Leader>s :sort<CR>
 
 " easier moving of code blocks
 vnoremap < <gv  " better indentation
