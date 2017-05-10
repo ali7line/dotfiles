@@ -6,6 +6,7 @@ export HISTFILE=$HOME/.bash_history
 export PATH=~/bin:$PATH
 export PATH=~/scripts:$PATH
 export PATH=~/scripts/control:$PATH
+export PATH=~/scripts/programming:$PATH
 export PATH=~/funcs:$PATH
 export WEECHAT_HOME=$HOME/.config/weechat
 export WORKON_HOME=$HOME/.local/virtualenv 
