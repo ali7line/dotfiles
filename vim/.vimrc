@@ -105,6 +105,12 @@ vnoremap <Leader>s :sort<CR>
 vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentation
 
+" easier moving of code blocks
+nnoremap <Leader>t :!ltags %
+nnoremap <Leader>m :make<CR><CR><CR>:copen<CR>
+nnoremap <Leader>c :cnext<CR>
+nnoremap <Leader>C :cprev<CR>
+
 "" base-config =================================================================
 "" disable backup and swap files
 set nobackup
@@ -305,3 +311,6 @@ let g:powerline_pycmd = "py3"
 "" mkdir -p ~/.vim/ftplugin
 "" wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
 ""set nofoldenable
+nnoremap <space> za
+vnoremap <space> za
+set foldmethod=syntax
