@@ -269,6 +269,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift"   }, "\\", function () awful.util.spawn("mpc --port 6601 pre") end),
     awful.key({ modkey,           }, "]", press_t),
 
+    awful.key({   }, "Print", function () awful.util.spawn("scrot -e 'mv $f ~/screenshots/ 2>/dev/null'", false) end),
+
     -- vol control
     awful.key({ modkey,           }, "-", function () awful.util.spawn("amixer sset Master 10%-") end),
     awful.key({ modkey,           }, "=", function () awful.util.spawn("amixer sset Master 10%+") end),
