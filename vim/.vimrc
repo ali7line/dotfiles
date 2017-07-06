@@ -204,7 +204,7 @@ set smartcase
 " When you want to paste large blocks of code into vim, press F2 before you
 " paste. At the bottom you should see ``-- INSERT (paste) --``.
 
-"set pastetoggle=<F5>
+set pastetoggle=<leader>y
 "" set clipboard=unnamed
 
 " Mouse and backspace
