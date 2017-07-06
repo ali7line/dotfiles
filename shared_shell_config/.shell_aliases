@@ -25,6 +25,10 @@ alias llc='clear;ll'
 alias ls1='ls -1'
 
 #----------------------------------
+# python development
+#----------------------------------
+alias pdef='grep -E "class|def"'
+#----------------------------------
 #
 #----------------------------------
 alias matlabc='matlab -nodesktop -nojvm -nosplash'
