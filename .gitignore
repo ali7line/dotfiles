@@ -33,3 +33,4 @@ chromedriver
 phantomjs
 stow*
 vim/.vim/plugged
+vim/.vim/.netrwhist
