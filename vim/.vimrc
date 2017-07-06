@@ -24,6 +24,7 @@ Plug 'tpope/vim-sensible'
 Plug 'vim-syntastic/syntastic'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-utils/vim-man'
+Plug 'johngrib/vim-game-code-break'
 
 
 "
