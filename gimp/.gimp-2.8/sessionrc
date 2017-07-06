@@ -8,12 +8,11 @@
 (session-info "toplevel"
     (factory-entry "gimp-empty-image-window")
     (position 2880 20)
-    (size 956 1056)
-    (open-on-exit))
+    (size 956 1056))
 (session-info "toplevel"
     (factory-entry "gimp-single-image-window")
-    (position 0 20)
-    (size 1916 1056)
+    (position 0 26)
+    (size 1916 1050)
     (open-on-exit)
     (aux-info
         (left-docks-width "203")
@@ -49,7 +48,7 @@
                 (aux-info
                     (show-button-bar "true"))))
         (book
-            (position 220)
+            (position 225)
             (current-page 0)
             (dockable "gimp-color-editor"
                 (tab-style automatic)
@@ -64,7 +63,7 @@
                 (aux-info
                     (show-button-bar "true"))))
         (book
-            (position 500)
+            (position 506)
             (current-page 0)
             (dockable "gimp-layer-list"
                 (tab-style automatic)
@@ -80,6 +79,39 @@
                 (tab-style automatic)
                 (aux-info
                     (show-button-bar "true"))))))
+(session-info "toplevel"
+    (factory-entry "gimp-file-open-dialog")
+    (position 0 26)
+    (size 900 675))
+(session-info "toplevel"
+    (factory-entry "gimp-image-new-dialog")
+    (position 0 26))
+(session-info "toplevel"
+    (factory-entry "gimp-scale-tool-dialog")
+    (position 0 26))
+(session-info "toplevel"
+    (factory-entry "gimp-rotate-tool-dialog")
+    (position 0 26))
+(session-info "toplevel"
+    (factory-entry "gimp-file-export-dialog")
+    (position 0 26)
+    (size 900 675))
+(session-info "toplevel"
+    (factory-entry "gimp-colorize-tool-dialog")
+    (position 0 26))
+(session-info "toplevel"
+    (factory-entry "gimp-hue-saturation-tool-dialog")
+    (position 0 26))
+(session-info "toplevel"
+    (factory-entry "gimp-color-balance-tool-dialog")
+    (position 0 26))
+(session-info "toplevel"
+    (factory-entry "gimp-brightness-contrast-tool-dialog")
+    (position 0 26))
+(session-info "toplevel"
+    (factory-entry "gimp-file-save-dialog")
+    (position 0 26)
+    (size 900 675))
 
 (hide-docks no)
 (single-window-mode yes)
