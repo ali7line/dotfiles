@@ -1,12 +1,4 @@
 #!/bin/bash
-git submodule add http://github.com/robbyrussell/oh-my-zsh shell-/shell-zsh/.config/oh-my-zsh
+git submodule add http://github.com/robbyrussell/oh-my-zsh.git shell-/shell-zsh/.config/oh-my-zsh
 
-git submodule add https://github.com/jiangmiao/auto-pairs vim/.vim/bundle/auto-pairs
-git submodule add http://github.com/kien/ctrlp.vim vim/.vim/bundle/ctrlp.vim
-git submodule add http://github.com/Yggdroot/indentLine vim/.vim/bundle/indentLine
-git submodule add http://github.com/nvie/vim-flake8 vim/.vim/bundle/vim-flake8
-git submodule add http://github.com/scrooloose/nerdtree vim/.vim/bundle/nerdtree
-git submodule add http://github.com/ervandew/supertab vim/.vim/bundle/supertab
-git submodule add http://github.com/davidhalter/jedi-vim vim/.vim/bundle/jedi-vim
-git submodule add http://github.com/SirVer/ultisnips vim/.vim/bundle/ultisnips --force
 git submodule update --init --recursive
