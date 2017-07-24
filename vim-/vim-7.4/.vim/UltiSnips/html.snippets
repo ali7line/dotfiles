@@ -1,0 +1,382 @@
+snippet durl
+{% url '${0}' %}
+endsnippet
+
+snippet refresh
+<meta http-equiv="refresh" content="5" >
+endsnippet
+
+snippet dempty
+{% empty %}
+${0}
+endsnippet
+
+snippet dsuper
+{{ block.super }}
+endsnippet
+
+snippet dextend
+{% extends parent_template|default:"${0}base.html" %}
+endsnippet
+
+snippet dblock
+{% block ${0} %}
+
+{% endblock %}
+endsnippet
+
+snippet dvar
+{{ $0 }}
+endsnippet
+
+snippet dcom
+{# $0 #}
+endsnippet
+
+snippet dfor
+{% for $0 %}
+
+{% endfor %}
+endsnippet
+
+snippet dif
+{% if $0 %}
+
+{% endif %}
+endsnippet
+
+snippet dife
+{% if $0 %}
+
+{% else %}
+
+{% endif %}
+endsnippet
+
+snippet article
+<article>
+${0}
+</article>
+endsnippet
+
+snippet input
+<input id="name" maxlength="31" name="name" type="text" />
+endsnippet
+
+snippet label
+<label for=""> ${0} </label>
+endsnippet
+
+snippet section
+<section>
+${0}
+</section>
+endsnippet
+
+snippet form
+<form action="" method="POST">
+${0}
+</form>
+endsnippet
+
+snippet button
+<button type="submit">
+${0}
+</button>
+endsnippet
+
+snippet em
+<em> ${0} </em>
+endsnippet
+
+snippet header
+<header>
+${0}
+</header>
+endsnippet
+
+snippet footer
+<footer>
+${0}
+</footer>
+endsnippet
+
+snippet content
+<content>
+${0}
+</content>
+endsnippet
+
+snippet time
+<time datetime=""> ${0} </time>
+endsnippet
+
+snippet h1
+<h1>${0}</h1>
+endsnippet
+
+snippet h2
+<h2>${0}</h2>
+endsnippet
+
+snippet h3
+<h3>${0}</h3>
+endsnippet
+
+snippet ul
+<ul>
+${0}
+</ul>
+endsnippet
+
+snippet ul.list
+<ul class="list-group">
+<li class="list-group-item">Inbox</li>
+<li class="list-group-item">Inbox</li>
+<li class="list-group-item">Inbox</li>
+</ul>
+endsnippet
+
+snippet ul.nav.tabs
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#">Inbox</a></li>
+	<li ><a href"#">Draft</a></li>
+	<li ><a href="#">Spam</a></li>
+</ul>
+endsnippet
+
+snippet ul.nav.pills
+<ul class="nav nav-pills">
+<!-- option: stacked --!>
+	<li class="active"><a href="#">Inbox</a></li>
+	<li ><a href"#">Draft</a></li>
+	<li ><a href="#">Spam</a></li>
+</ul>
+endsnippet
+
+snippet comment
+<!-- ${0} --!>
+endsnippet
+
+snippet li
+<li> ${0} </li>
+endsnippet
+
+snippet dl
+<dl>
+${0}
+</dl>
+endsnippet
+
+snippet dt
+<dt> ${0} </dt>
+endsnippet
+
+snippet dd
+<dd> ${0} </dd>
+endsnippet
+
+snippet a
+<a href=""> ${0} </a>
+endsnippet
+
+snippet a.list
+<div class="list-group">
+	<a class="list-group-item" href="#">Inbox</a>${0}
+	<a class="list-group-item active" href="#">Inbox</a>
+	<a class="list-group-item" href="#" >Inbox</a>
+</div>
+endsnippet
+
+snippet a.list.text
+<div class="list-group">
+	<a class="list-group-item" href="#">
+		<h4 class="list-group-item-heading"> title here</h4>
+		<p class="list-group-item-text"> some text here ...</p>
+	</a>
+</div>
+endsnippet
+
+snippet p
+<p>
+${0}
+</p>
+endsnippet
+
+
+snippet refresh
+<meta http-equiv="refresh" content="3" >
+endsnippet
+
+snippet html.full
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8">
+<title>
+
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if IE]><script
+src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+</script><![endif]-->
+</head>
+
+<body>
+
+</body>
+</html>
+endsnippet
+
+snippet html.boot
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title> Bootstrap Application </title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<!--[if IE]><script
+src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+</script><![endif]-->
+</head>
+<body>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+</body>
+</html>
+endsnippet
+
+snippet html.simple
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<h1>Welcome</h1>
+	</body>
+</html>
+endsnippet
+
+snippet div
+<div>
+${0}
+</div>
+endsnippet
+
+snippet div.header
+<div class="page-header">
+	<h1>${0}<small></small></h1>
+</div>
+endsnippet
+
+snippet div.panel
+<div class="panel panel-default">
+	<div class="panel-heading">
+		ATTENTION!
+	</div>
+	<div class="panel-body">
+		An important text here!
+	</div>
+	<div class="panel-footer">
+		<a href="#" class="btn btn-danger btn-sm"> Agree </a>
+		<a href="#" class="btn btn-default btn-sm"> Decline </a>
+	</div>
+</div>
+endsnippet
+
+snippet div.media
+<div class="media">
+	<a class="pull-left" href="#"> 
+		<img class="media-object" src="img/logo.jpg" alt="" />
+	</a>
+	<div class="media-body">
+		<h4 class="media-heading">Heading is here!</h4>
+		<p>
+		some text here ...
+		</p>
+	</div>
+</div>
+endsnippet
+
+snippet div.thumb
+<div class="thumbnail" href="#">
+	<img src="img/logo.jpg">
+	<div class="caption">
+		<h3>Some img text</h3>
+	</div>
+</div>
+endsnippet
+
+snippet a.btn
+<a href="#" class="btn btn-primary"> Click Here </a>
+endsnippet
+
+snippet div.class
+<div class="${0}">
+</div>
+endsnippet
+
+snippet div.con
+<div class="container">
+	${0}
+</div>
+endsnippet
+
+snippet div.row
+<div class="row">
+	${0}
+</div>
+endsnippet
+
+snippet div.col
+<div class="col-${0}">
+</div>
+endsnippet
+
+snippet main
+<main>
+${0}
+</main>
+endsnippet
+
+snippet css
+<link rel="stylesheet" type="text/css" href="${0}.css" />
+endsnippet
+
+snippet img
+<img src="${0}" alt="" />
+endsnippet
+
+snippet p.class 
+<p class="${0}">
+</p>
+endsnippet
+
+snippet span
+<span>  </span>
+endsnippet
+
+snippet nav
+<nav>
+<ul>
+<li> </li>
+</ul>
+</nav>
+endsnippet
+
+snippet span.badge
+<span class="badge">${0}</span>
+endsnippet
+
+snippet bread
+<ol claas="breadchrum">
+	<li ><a href="#">Home</a></li>
+	<li ><a href="#">About</a></li>
+	<li class="active"><a href="#">Author</a></li>
+</ol>
+endsnippet
