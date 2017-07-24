@@ -1,0 +1,9 @@
+[user]
+	email = "soltani.110@gmail.com"
+	name = "ali7line"
+[alias]
+	tree = log --graph --decorate --pretty=oneline \n--abbrev-commit
+[core]
+	editor = vim
+[credential]
+	helper = cache --timeout=3600
