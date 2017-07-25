@@ -34,3 +34,4 @@ phantomjs
 stow*
 */*/.vim/.netrwhist
 */*/.vim/plugged
+*.m3u
