@@ -18,7 +18,7 @@ echo ""
 
 # standard config
 clean_up "standard config"
-files=("$HOME/.fonts", "$HOME/.gitkeep", "$HOME/scripts" "$HOME/.shell_alliases" "$HOME/.shell_env" "$HOME/.xinitrc")
+files=("$HOME/.fonts" "$HOME/.gitkeep" "$HOME/scripts" "$HOME/.shell_aliases" "$HOME/.shell_env" "$HOME/.xinitrc")
 remove_files "${files[@]}"
 
 # Awesome
