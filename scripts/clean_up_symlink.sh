@@ -19,7 +19,7 @@ echo ""
 
 # standard config
 clean_up "standard config"
-files=("$HOME/.fonts" "$HOME/.gitkeep" "$HOME/scripts" "$HOME/.shell_aliases" "$HOME/.shell_env" "$HOME/.xinitrc")
+files=("$HOME/.fonts" "$HOME/.gitkeep" "$HOME/scripts" "$HOME/.shell_aliases" "$HOME/.shell_env" "$HOME/.xinitrc" "$HOME/.config/user-dir.locale" "$HOME/.config/user-dirs.dirs")
 remove_files "${files[@]}"
 
 # Awesome

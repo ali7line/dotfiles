@@ -67,6 +67,7 @@ if __name__ == '__main__':
         all_dir = next(os.walk('./apps'))[1]
         all_dir.sort()
         f.write('#!/bin/bash\n')
+        f.write('stow standard\n')
 
         for dir_ in all_dir:
             # ignores .git
