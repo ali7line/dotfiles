@@ -16,6 +16,10 @@ clean_up () {
 echo "CLEANING UP ALL SYMBOLIC LINKED CONFING FILES!"
 echo ""
 
+# standard config
+clean_up "standard config"
+files=("$HOME/.fonts", "$HOME/.gitkeep", "$HOME/scripts" "$HOME/.shell_alliases" "$HOME/.shell_env" "$HOME/.xinitrc")
+remove_files "${files[@]}"
 
 # Awesome
 clean_up "awesome"
