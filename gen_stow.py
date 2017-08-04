@@ -1,3 +1,4 @@
+from shutil import which
 import os
 
 def stow(dir_):
@@ -15,20 +16,68 @@ def version_stow(dir_):
     print('\t* Stowing', user_choice)
 
     return 'stow -d {} -t $HOME {}\n'.format(dir_, user_choice)
-    
 
-with open('stow_all.bash', 'wt') as f:
-    f.write('#!/bin/bash\n')
+
+
+
+class DotApp:
+    def __init__(self, dir_):
+        self.app_name = self.clean_name(dir_)
+        self.address = dir_
+        self.installed = which(self.app_name)
+        self.versions = None # get dotfile versions
+
+    def find_dotfile_versions(self):
+        pass
+
+    def find_installed_version(self):
+        pass
+
+
+
+def gather_dotfile_info():
+    info = {}
+    # list of dotfiles 
     all_dir = next(os.walk('.'))[1]
-
     for dir_ in all_dir:
-        # ignores .git
         if dir_.startswith('.'):
             continue
-
-        print(dir_)
-        if dir_.endswith('-'):
-            # dir with different versions of config
-            f.write(version_stow(dir_))
+        elif dir_.endswith('-'):
+            # has multiversion
+            app_name = dir_[:-1]
+            versions = get_dotfile_versions(dir_)
+            installed = which(app_name)
+            app_info = {
+                    'address': dir_,
+                    'versions': versions,
+                    'installed': installed,
+                    }
         else:
-            f.write(stow(dir_))
+            app_name = dir_
+            installed = which(app_name)
+            app_info = {
+                    'address': dir_,
+                    'versions': None,
+                    'installed': installed,
+                    }
+
+
+
+
+    
+if __name__ == '__main__':
+    with open('stow_all.bash', 'wt') as f:
+        f.write('#!/bin/bash\n')
+        all_dir = next(os.walk('.'))[1]
+
+        for dir_ in all_dir:
+            # ignores .git
+            if dir_.startswith('.'):
+                continue
+
+            print(dir_)
+            if dir_.endswith('-'):
+                # dir with different versions of config
+                f.write(version_stow(dir_))
+            else:
+                f.write(stow(dir_))

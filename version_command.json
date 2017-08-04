@@ -1,0 +1,41 @@
+{
+    "awesome": {
+        v_command : "--version",
+    },
+    "gimp": {
+        v_command : "--version",
+    },
+    "git": {
+        v_command : "--version",
+    },
+    "mpd": {
+        v_command : "--version",
+    },
+    "mpv": {
+        v_command : "--version",
+    },
+    "ncmpcpp": {
+        v_command : "--version",
+    },
+    "qutebrowser": {
+        v_command : "--version",
+    },
+    "redshift": {
+        v_command : "-V",
+    },
+    "shell": {
+        v_command : "--version",
+    },
+    "streamlink": {
+        v_command : "--version",
+    },
+    "terminator": {
+        v_command : "--version",
+    },
+    "tmux": {
+        v_command : "-V",
+    },
+    "vim": {
+        v_command : "--version",
+    }
+}
