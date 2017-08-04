@@ -19,7 +19,6 @@ def version_stow(dir_):
 
 
 
-
 class DotApp:
     def __init__(self, dir_):
         self.app_name = self.clean_name(dir_)
@@ -63,21 +62,15 @@ def gather_dotfile_info():
 
 
 
-
-    
 if __name__ == '__main__':
     with open('stow_all.bash', 'wt') as f:
+        all_dir = next(os.walk('./apps'))[1]
+        all_dir.sort()
         f.write('#!/bin/bash\n')
-        all_dir = next(os.walk('.'))[1]
 
         for dir_ in all_dir:
             # ignores .git
             if dir_.startswith('.'):
                 continue
 
-            print(dir_)
-            if dir_.endswith('-'):
-                # dir with different versions of config
-                f.write(version_stow(dir_))
-            else:
-                f.write(stow(dir_))
+            f.write(version_stow(os.path.join('./apps', dir_)))
