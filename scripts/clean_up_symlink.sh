@@ -5,6 +5,7 @@ remove_files () {
       do
         if [[ -L "${i}" ]]; then
             echo "    - Removing $i"
+	    $(rm $i)
         fi
       done
 }
