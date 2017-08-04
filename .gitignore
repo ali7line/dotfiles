@@ -35,3 +35,4 @@ stow*
 */*/.vim/.netrwhist
 */*/.vim/plugged
 *.m3u
+__pycache__
