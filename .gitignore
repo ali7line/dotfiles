@@ -32,7 +32,7 @@ qsettings/
 chromedriver
 phantomjs
 stow*
-*/*/.vim/.netrwhist
-*/*/.vim/plugged
+.netrwhist
+plugged/
 *.m3u
 __pycache__

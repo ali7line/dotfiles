@@ -1,7 +1,7 @@
 set exrc
 set nocompatible
 " Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.local/vim/plugged')
 
 " Make sure you use single quotes
 "
