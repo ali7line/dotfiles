@@ -1,57 +1,12 @@
 [global_config]
-  scroll_tabbar = True
+  always_split_with_profile = True
+  inactive_color_offset = 0.757009345794
 [keybindings]
-  broadcast_all = None
-  broadcast_group = None
-  broadcast_off = None
-  close_term = None
-  close_window = None
-  cycle_next = None
-  cycle_prev = None
-  edit_tab_title = None
-  edit_terminal_title = None
-  edit_window_title = None
-  full_screen = None
-  go_down = None
-  go_left = None
-  go_next = None
-  go_prev = None
-  go_right = None
-  go_up = None
-  group_all = None
-  group_tab = None
-  help = None
-  hide_window = None
-  insert_number = None
-  insert_padded = None
-  layout_launcher = None
-  move_tab_left = None
-  move_tab_right = None
-  new_tab = None
-  new_terminator = None
-  new_window = None
-  next_tab = None
-  prev_tab = None
-  reset = None
-  reset_clear = None
-  resize_down = None
-  resize_left = None
-  resize_right = None
-  resize_up = None
-  rotate_ccw = None
-  rotate_cw = None
-  scaled_zoom = None
-  search = None
-  split_horiz = None
-  split_vert = None
-  toggle_scrollbar = None
-  toggle_zoom = None
-  ungroup_all = None
-  ungroup_tab = None
 [layouts]
   [[default]]
     [[[child1]]]
       parent = window0
+      profile = default
       type = Terminal
     [[[window0]]]
       parent = ""
@@ -59,10 +14,9 @@
 [plugins]
 [profiles]
   [[default]]
-    background_darkness = 0.09
     cursor_color = "#aaaaaa"
-    font = DejaVu Sans Mono for Powerline 12
+    font = Source Code Pro for Powerline Medium 14
     scrollback_infinite = True
-    scrollbar_position = hidden
-    show_titlebar = False
     use_system_font = False
+    show_titlebar = False
+    scrollbar_position = hidden

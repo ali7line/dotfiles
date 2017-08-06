@@ -11,28 +11,20 @@ ssl/
 state
 *.state
 *~
-filezilla/
 mc/
-libreoffice/
-htop/
-VirtualBox/
 dconf/
 pulse/
 playlists/
-gthumb/
-gtk-2.0/
-Brackets/
-laptop/.config/deluge/icons
-laptop/.config/deluge/core.conf
-laptop/.config/deluge/gtkui.conf
-laptop/.vim/.netrwhist
-laptop/bin/phantomjs
 gtkui.conf
 qsettings/
 chromedriver
 phantomjs
 stow*
+<<<<<<< HEAD
 .netrwhist
+=======
+>>>>>>> 3a6b67414695ed07c88242b585938401174c0c46
 plugged/
 *.m3u
 __pycache__
+.netrwhist
