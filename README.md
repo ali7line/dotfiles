@@ -8,3 +8,6 @@ make sure 'stow' is installed.
 run 'get_stow.py'.
 
 first check then run the generated 'stow_all.bash' file.
+
+## awesome
+mod + shift + 0         dota2

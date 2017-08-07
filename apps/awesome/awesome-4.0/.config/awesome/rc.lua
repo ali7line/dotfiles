@@ -11,7 +11,20 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
 
--- my test function
+
+
+-- my functions
+function os.capture(cmd, raw)
+  local f = assert(io.popen(cmd, 'r'))
+  local s = assert(f:read('*a'))
+  f:close()
+  if raw then return s end
+  s = string.gsub(s, '^%s+', '')
+  s = string.gsub(s, '%s+$', '')
+  s = string.gsub(s, '[\n\r]+', ' ')
+  return s
+end
+
 local double_tap_timer = nil
 local function press_t()
     if double_tap_timer then
@@ -36,6 +49,13 @@ local function press_t()
         })
         return false
     end)
+end
+
+local function dota2()
+	local t = os.capture(os.getenv("HOME").."/scripts/dota2", true)
+    naughty.notify({ 
+        text = t,
+    })
 end
 
 -- {{{ Error handling
@@ -274,6 +294,8 @@ globalkeys = awful.util.table.join(
     -- vol control
     awful.key({ modkey,           }, "-", function () awful.util.spawn("amixer sset Master 10%-") end),
     awful.key({ modkey,           }, "=", function () awful.util.spawn("amixer sset Master 10%+") end),
+
+    awful.key({ modkey, "Shift"   }, "0", dota2),
 
     awful.key({ modkey,           }, "F12", function () awful.util.spawn("slock") end),
 
