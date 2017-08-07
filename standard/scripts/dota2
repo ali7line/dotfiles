@@ -1,0 +1,11 @@
+#!/bin/bash
+sec=$(date +%s)
+dota2_html=/tmp/dota2_html-$sec.html
+dota2_table=/tmp/dota2_table-$sec.html
+dota2_txt=/tmp/dota2_text-$sec.txt
+echo "Downloading GosuGamers.net/dota2"
+wget --quiet  http://www.gosugamers.net/dota2 -O $dota2_html
+echo "--------------------------------"
+sed -ne "/<table id=\"gb-matches\" class=\"simple gamelist \">/,/<\/table>/p" $dota2_html >> $dota2_table
+links -dump $dota2_table
+
