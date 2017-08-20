@@ -41,6 +41,7 @@ alias lcd='cd $(cat /tmp/$USER/CD_SAVED) && [ -f /tmp/$USER/ENV_SAVED ] && worko
 
 ## matlab
 alias matlabc='matlab -nodesktop -nojvm -nosplash'
+alias matlabj='matlab -nodesktop -nosplash'
 
 ## vim
 alias e='vim'
