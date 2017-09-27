@@ -1,3 +1,12 @@
+--getmetatable('').__index = function(str,i) return string.sub(str,i,i) end
+--getmetatable('').__call = function(str,i,j)  
+--  if type(i)~='table' then return string.sub(str,i,j) 
+--    else local t={} 
+--    for k,v in ipairs(i) do t[k]=string.sub(str,v,v) end
+--    return table.concat(t)
+--    end
+--  end
+
 function os.capture(cmd, raw)
     local f = assert(io.popen(cmd, 'r'))
     local s = assert(f:read('*a'))
@@ -38,4 +47,5 @@ end
 lines = split_newline(result)
 for k, v in pairs(lines) do
     print(k,':', v)
+    print(string.match(v, 'Battery .'))
 end
