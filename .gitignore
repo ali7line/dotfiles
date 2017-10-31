@@ -27,4 +27,5 @@ stow*
 plugged/
 *.m3u
 __pycache__
+*.pyc
 .netrwhist

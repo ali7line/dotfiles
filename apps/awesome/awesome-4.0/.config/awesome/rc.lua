@@ -11,6 +11,17 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
 
+-- Additional stuff
+local layout_indicator = require("keyboard-layout-indicator")
+-- define your layouts
+kbdcfg = layout_indicator({
+    layouts = {
+        {name="fa",  layout="ir",  variant="pes"},
+        {name="us",  layout="us",  variant=nil}
+    }
+})
+
+
 
 
 -- my functions
@@ -158,9 +169,6 @@ mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
 
--- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
-
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
@@ -262,7 +270,7 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
+            kbdcfg.widget,
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
@@ -281,6 +289,9 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
+	-- keyboard layout
+	awful.key({ "Shift"         }, "Shift_R", function() kbdcfg:next() end ),
+    awful.key({ "Mod4", "Shift" }, "Shift_R", function() kbdcfg:prev() end ),
 
     -- mpd control
     awful.key({ modkey,           }, "[", function () awful.util.spawn("mpc --port 6601 pause") end),
@@ -318,7 +329,7 @@ globalkeys = awful.util.table.join(
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end, {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart, {description = "reload awesome", group = "awesome"}),
-    awful.key({ modkey, "Shift"   }, "q", awesome.quit, {description = "quit awesome", group = "awesome"}),
+    awful.key({ modkey, "Shift"   }, "F12", awesome.quit, {description = "quit awesome", group = "awesome"}),
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end, {description = "increase master width factor", group = "layout"}),
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)          end, {description = "decrease master width factor", group = "layout"}),
@@ -356,7 +367,7 @@ clientkeys = awful.util.table.join(
             c:raise()
         end,
         {description = "toggle fullscreen", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
+    awful.key({ modkey,           }, "q",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),

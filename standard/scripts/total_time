@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo $PWD
+seconds=$(find . -maxdepth 3 -iname '*.mp4' -exec ffprobe -v quiet -of csv=p=0 -show_entries format=duration {} \; | paste -sd+ | bc)
+printf -v seconds %.0f "$seconds"
+echo $seconds
+printf '%dh:%dm:%ds\n' $(($seconds/3600)) $(($seconds%3600/60)) $(($seconds%60))
