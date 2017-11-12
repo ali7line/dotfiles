@@ -17,6 +17,7 @@ local layout_indicator = require("keyboard-layout-indicator")
 kbdcfg = layout_indicator({
     layouts = {
         {name="fa",  layout="ir",  variant="pes"},
+        {name="ru",  layout="ru",  variant=nil},
         {name="us",  layout="us",  variant=nil}
     }
 })
