@@ -37,5 +37,5 @@ function _get_ping() {
 num1=$(_get_ping 192 l)
 num2=$(_get_ping petiak p)
 num3=$(_get_ping asriran a)
-num4=$(_get_ping google g)
+num4=$(_get_ping e100 g)
 printf "%s %s %s %s #[bg=colour236]\n" $num1 $num2 $num3 $num4
