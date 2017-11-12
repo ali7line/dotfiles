@@ -39,6 +39,9 @@ alias lcd='cd $(cat /tmp/$USER/CD_SAVED) && [ -f /tmp/$USER/ENV_SAVED ] && worko
 #alias ipython-web='ipython notebook --no-browser --ip=0.0.0.0'
 #alias ipython3-web='ipython3 notebook --no-browser --ip=0.0.0.0'
 
+## C Development
+alias gdbb='gdb --batch --ex run --ex bt --ex q --args'
+
 ## matlab
 alias matlabc='matlab -nodesktop -nojvm -nosplash'
 
@@ -106,3 +109,6 @@ alias pg='ping -c 3 google.com'
 
 ## time
 alias pool='sudo ntpdate ir.pool.ntp.org'
+ 
+## wine 
+alias mword='wine .wine/drive_c/Program\ Files\ \(x86\)/Microsoft\ Office/Office12/WINWORD.EXE'
