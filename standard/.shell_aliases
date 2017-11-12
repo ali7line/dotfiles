@@ -44,6 +44,7 @@ alias gdbb='gdb --batch --ex run --ex bt --ex q --args'
 
 ## matlab
 alias matlabc='matlab -nodesktop -nojvm -nosplash'
+alias matlabj='matlab -nodesktop -nosplash'
 
 ## vim
 alias e='vim'
