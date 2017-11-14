@@ -11,6 +11,18 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 
+
+-- Additional Stuff
+local layout_indicator = require("keyboard-layout-indicator")                      
+-- define your layouts                                                             
+kbdcfg = layout_indicator({                                                        
+    layouts = {                                                                    
+        {name="fa",  layout="ir",  variant="pes"},                                 
+        {name="ru",  layout="ru",  variant=nil},                                   
+        {name="us",  layout="us",  variant=nil},
+    }
+    }) 
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -193,6 +205,7 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
+    right_layout:add(kbdcfg.widget)                                                                                                           
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
 
@@ -237,6 +250,9 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "`", awful.tag.history.restore),
     awful.key({  }, "Print", function () awful.util.spawn("scrot -e 'mv $f ~/screenshots/ 2>/dev/null'", false) end),
+    awful.key({ modkey, "Shift"   }, "p", function () awful.util.spawn("scrot -e 'mv $f ~/screenshots/ 2>/dev/null'", false) end),
+    awful.key({ "Shift"         }, "Shift_R", function() kbdcfg:next() end ),
+    awful.key({ "Mod4", "Shift" }, "Shift_R", function() kbdcfg:prev() end ),
     
 
     awful.key({ modkey,           }, "j",

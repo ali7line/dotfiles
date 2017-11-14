@@ -22,9 +22,6 @@ kbdcfg = layout_indicator({
     }
 })
 
-
-
-
 -- my functions
 function os.capture(cmd, raw)
   local f = assert(io.popen(cmd, 'r'))
