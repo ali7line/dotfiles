@@ -1,0 +1,1 @@
+env WINEPREFIX="/home/$USER/.wineprefixes/office2010" wine start /ProgIDOpen Excel.Addin %f
