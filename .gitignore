@@ -29,3 +29,4 @@ plugged/
 __pycache__
 *.pyc
 .netrwhist
+.gittodo
