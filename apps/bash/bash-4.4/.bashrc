@@ -1,8 +1,8 @@
 
 # ~/.bashrc
 #
-if [ -f ~/.bash_env ]; then
-    . ~/.bash_env
+if [ -f ~/.shell_env ]; then
+    source ~/.shell_env
 fi
 
 export MPD_PORT=6601
@@ -45,10 +45,9 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/.shell_aliases ]; then
+    source ~/.shell_aliases
 fi
-
 
 # Sets the Mail Environment Variable
 MAIL=/var/spool/mail/gpu && export MAIL
@@ -173,6 +172,8 @@ function tmuxopen () {
     fi
 }
 TMUX_BACK=$TMUX
+
+
 
 #if which ruby >/dev/null && which gem >/dev/null; then PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH" fi
 [ ! -d /tmp/$USER ] && mkdir /tmp/$USER
