@@ -10,17 +10,14 @@ alias rmgit='git ls-files -z -d | xargs -0 --no-run-if-empty git rm'
 ## dir roaming
 alias ...='cd ../..'
 alias ..='cd ..'
-alias cDD='cd ~/downloads'
-alias cdp='cd ~/projects'
+alias cdd='cd ~/downloads'
+alias cdp='cd ~/life'
+alias cdl='cd ~/life'
 alias dot='cd ~/dotfiles'
-alias cdpp='cd ~/public/work/'
-alias cdg='cd ~/gitClones'
-alias que='cd ~/life/projects/queue'
 alias temp='cd ~/tmp/'
 alias down='cd ~/downloads/'
-alias projects='cd ~/projects/'
 alias PPP='cd ~/tmp/practice'
-alias mit='cd ~/projects/ongoing/mit-challange'
+alias rmcdir='rmcdir.bash && ..'
 
 ## ls
 alias ll='ls -alF --group-directories-first'
@@ -28,6 +25,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias lsc='clear;ls'
 alias llc='clear;ll'
+alias llh='ll -h'
 alias ls1='ls -1'
 
 ## python development
@@ -112,4 +110,4 @@ alias pg='ping -c 3 google.com'
 alias pool='sudo ntpdate ir.pool.ntp.org'
  
 ## wine 
-alias mword='wine .wine/drive_c/Program\ Files\ \(x86\)/Microsoft\ Office/Office12/WINWORD.EXE'
+#alias mword='wine .wine/drive_c/Program\ Files\ \(x86\)/Microsoft\ Office/Office12/WINWORD.EXE'
