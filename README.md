@@ -11,3 +11,4 @@ first check then run the generated 'stow_all.bash' file.
 
 ## awesome
 mod + shift + 0         dota2
+mod + shift + p         printscreen
