@@ -96,7 +96,7 @@ end
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
+    tags[s] = awful.tag({ "code", "test", "guide", 4, 5, 6, "web", 8, "bg" }, s, layouts[1])
 end
 -- }}}
 
@@ -245,6 +245,10 @@ globalkeys = awful.util.table.join(
 
     -- screen lock
     awful.key({ modkey,           }, "F12", function () awful.util.spawn("slock") end),
+
+    -- Network manager
+    awful.key({ modkey, "Shift"   }, "m", function () awful.util.spawn("nm-applet") end),
+    awful.key({ modkey, "Shift"   }, "n", function () awful.util.spawn("pkill nm-applet") end),
 
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),

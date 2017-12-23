@@ -304,8 +304,14 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "-", function () awful.util.spawn("amixer sset Master 10%-") end),
     awful.key({ modkey,           }, "=", function () awful.util.spawn("amixer sset Master 10%+") end),
 
+    -- Networkmanager
+    awful.key({ modkey, "Shift"   }, "m", function () awful.util.spawn("nm-applet") end),
+    awful.key({ modkey, "Shift"   }, "n", function () awful.util.spawn("pkill nm-applet") end),
+
+    -- Shortcuts
     awful.key({ modkey, "Shift"   }, "0", dota2),
 
+    -- F's
     awful.key({ modkey,           }, "F12", function () awful.util.spawn("slock") end),
 
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help, {description="show help", group="awesome"}),
