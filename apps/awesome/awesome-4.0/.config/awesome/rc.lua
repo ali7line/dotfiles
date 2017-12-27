@@ -303,6 +303,8 @@ globalkeys = awful.util.table.join(
     -- vol control
     awful.key({ modkey,           }, "-", function () awful.util.spawn("amixer sset Master 10%-") end),
     awful.key({ modkey,           }, "=", function () awful.util.spawn("amixer sset Master 10%+") end),
+    awful.key({ modkey, "Shift"   }, "-", function () awful.util.spawn("pactl -- set-sink-volume 0 -10%") end),                               
+    awful.key({ modkey, "Shift"   }, "=", function () awful.util.spawn("pactl -- set-sink-volume 0 +10%") end),
 
     -- Networkmanager
     awful.key({ modkey, "Shift"   }, "m", function () awful.util.spawn("nm-applet") end),
