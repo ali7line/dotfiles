@@ -10,8 +10,15 @@ export PATH=~/scripts/programming:$PATH
 export PATH=~/scripts/docker_files:$PATH
 export PATH=~/funcs:$PATH
 export PATH=/usr/local/MATLAB/R2016b/bin:$PATH
+
 export WEECHAT_HOME=$HOME/.config/weechat
+
+# virtualenv
 export WORKON_HOME=$HOME/.local/virtualenv 
+# pipsi
+export PIPSI_HOME=$HOME/.local/virtualenv
+export PIPSI_BIN_DIR=$HOME/.local/bin
+export PATH=/home/king110/.local/bin:$PATH
 
 
 if [ -f /usr/bin/virtualenvwrapper.sh ]; then
