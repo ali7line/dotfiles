@@ -8,11 +8,11 @@
 
 -- {{{ Main
 theme = {}
-theme.wallpaper = "~/.config/awesome/themes/zenburn/wallpaper/zenburn-background.png"
+theme.wallpaper = "~/.config/awesome/themes/wallpapers/walls.png"
 -- }}}
 
 -- {{{ Styles
-theme.font      = "sans 10"
+theme.font      = "sans 15"
 
 -- {{{ Colors
 theme.fg_normal  = "#DCDCCC"
