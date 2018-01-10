@@ -13,7 +13,7 @@ local menubar = require("menubar")
 
 
 -- Additional Stuff
-local layout_indicator = require("keyboard-layout-indicator")                      
+local layout_indicator = require("iWidget.keyboard-layout-indicator")                      
 -- define your layouts                                                             
 kbdcfg = layout_indicator({                                                        
     layouts = {                                                                    
@@ -22,7 +22,6 @@ kbdcfg = layout_indicator({
         {name="us",  layout="us",  variant=nil},
     }
     }) 
-
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -205,6 +204,7 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
+    right_layout:add(battery.widget)
     right_layout:add(kbdcfg.widget)                                                                                                           
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
