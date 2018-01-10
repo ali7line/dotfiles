@@ -20,10 +20,7 @@ qsettings/
 chromedriver
 phantomjs
 stow*
-<<<<<<< HEAD
 .netrwhist
-=======
->>>>>>> 3a6b67414695ed07c88242b585938401174c0c46
 plugged/
 *.m3u
 __pycache__
@@ -31,3 +28,4 @@ __pycache__
 .netrwhist
 .gittodo
 chromedriver
+apps/gimp/gimp-2.8/
