@@ -5,7 +5,7 @@
 
 -- {{{ Main
 local theme = {}
-theme.wallpaper = "/usr/share/awesome/themes/zenburn/zenburn-background.png"
+theme.wallpaper = "~/.config/awesome/themes/wallpapers/arch_floyd.png"
 -- }}}
 
 -- {{{ Styles

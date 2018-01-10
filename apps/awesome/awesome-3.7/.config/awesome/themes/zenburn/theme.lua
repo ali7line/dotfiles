@@ -8,7 +8,7 @@
 
 -- {{{ Main
 theme = {}
-theme.wallpaper = "~/.config/awesome/themes/wallpapers/walls.png"
+theme.wallpaper = "~/.config/awesome/themes/wallpapers/arch_floyd.png"
 -- }}}
 
 -- {{{ Styles
