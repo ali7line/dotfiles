@@ -68,6 +68,11 @@ noremap <C-h> :nohl<CR>
 vnoremap <C-h> :nohl<CR>
 inoremap <C-h> :nohl<CR>
 
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+
 " Quicksave command
 noremap <C-Z> :update<CR><ESC>
 vnoremap <C-Z> <C-C>:update<CR><ESC>
@@ -127,6 +132,7 @@ set autoread
 set showcmd
 
 set laststatus=2
+set noshowmode
 set bs=2     " make backspace behave like normal again
 
 " automatic reloading of .vimrc
@@ -169,7 +175,7 @@ set number  " show line numbers
 set tw=79   " width of document (used by gd)
 set nowrap  " don't automatically wrap on load
 set fo-=t   " don't automatically wrap text when typing
-set colorcolumn=80
+set colorcolumn=120
 highlight ColorColumn ctermbg=233
 highlight Normal ctermbg=none
 set cursorline
