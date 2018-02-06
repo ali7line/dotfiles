@@ -1,5 +1,6 @@
 [global_config]
   borderless = True
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   inactive_color_offset = 0.6
 [keybindings]
 [layouts]
@@ -14,9 +15,11 @@
 [plugins]
 [profiles]
   [[default]]
+    background_darkness = 0.9
     background_image = None
+    background_type = transparent
     copy_on_selection = True
-    font = Droid Sans Mono Dotted for Powerline 16
+    font = Droid Sans Mono for Powerline 16
     scrollback_lines = 1000000
     scrollbar_position = hidden
     show_titlebar = False
