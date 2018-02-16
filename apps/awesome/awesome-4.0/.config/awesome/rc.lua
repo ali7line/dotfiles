@@ -12,7 +12,7 @@ local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
 
 -- Additional stuff
-local layout_indicator = require("keyboard-layout-indicator")
+local layout_indicator = require("niki.widget.keyboard-layout-indicator")
 -- define your layouts
 kbdcfg = layout_indicator({
     layouts = {
