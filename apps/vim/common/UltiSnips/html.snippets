@@ -11,6 +11,19 @@ snippet dempty
 ${0}
 endsnippet
 
+snippet dmsg
+    {% if messages %}
+    <ul>
+        {% for message in  messages %}
+            {% if message.tags %}
+            <li class="{{ message.tags }}">1: {{ message }}  </li>
+            {% else %}
+            <li> 2: {{ message }}  </li>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+endsnippet
+
 snippet dsuper
 {{ block.super }}
 endsnippet
