@@ -239,10 +239,10 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "F6", function () awful.util.spawn("xbacklight -inc 10") end),
 
     -- vol control
-    awful.key({ modkey,           }, "-", function () awful.util.spawn("amixer sset Master 10%-") end),
-    awful.key({ modkey,           }, "=", function () awful.util.spawn("amixer sset Master 10%+") end),
-    awful.key({ modkey, "Shift"   }, "-", function () awful.util.spawn("pactl -- set-sink-volume 0 -10%") end),
-    awful.key({ modkey, "Shift"   }, "=", function () awful.util.spawn("pactl -- set-sink-volume 0 +10%") end),
+    awful.key({ modkey, "Shift"   }, "-", function () awful.util.spawn("amixer sset Master 10%-") end),
+    awful.key({ modkey, "Shift"   }, "=", function () awful.util.spawn("amixer sset Master 10%+") end),
+    awful.key({ modkey,           }, "-", function () awful.util.spawn("pactl -- set-sink-volume 0 -10%") end),
+    awful.key({ modkey,           }, "=", function () awful.util.spawn("pactl -- set-sink-volume 0 +10%") end),
 
     -- screen lock
     awful.key({ modkey,           }, "F12", function () awful.util.spawn("slock") end),
