@@ -2,4 +2,4 @@
 
 pwd=$(pwd)
 cd ..
-rmdir $pwd
+rmdir "$pwd"
