@@ -16,8 +16,8 @@ local layout_indicator = require("niki.widget.keyboard-layout-indicator")
 -- define your layouts
 kbdcfg = layout_indicator({
     layouts = {
-        {name="fa",  layout="ir",  variant="pes"},
-        {name="ru",  layout="ru",  variant=nil},
+--        {name="fa",  layout="ir",  variant="pes"},
+--        {name="ru",  layout="ru",  variant=nil},
         {name="us",  layout="us",  variant=nil}
     }
 })
@@ -290,6 +290,10 @@ globalkeys = awful.util.table.join(
 	-- keyboard layout
 	awful.key({ "Shift"         }, "Shift_R", function() kbdcfg:next() end ),
     awful.key({ "Mod4", "Shift" }, "Shift_R", function() kbdcfg:prev() end ),
+
+    -- laptop brightness control
+    awful.key({ modkey,            }, "F5", function () awful.util.spawn("xbacklight -dec 10") end),                                                                       
+    awful.key({ modkey,            }, "F6", function () awful.util.spawn("xbacklight -inc 10") end),
 
     -- mpd control
     awful.key({ modkey,           }, "[", function () awful.util.spawn("mpc --port 6601 pause") end),

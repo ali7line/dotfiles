@@ -9,7 +9,7 @@ theme.wallpaper = "~/.config/awesome/themes/wallpapers/arch_floyd.png"
 -- }}}
 
 -- {{{ Styles
-theme.font      = "sans 10"
+theme.font      = "Noto Sans 10"
 
 -- {{{ Colors
 theme.fg_normal  = "#DCDCCC"
