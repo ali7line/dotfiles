@@ -7,6 +7,7 @@ export PATH=~/bin:$PATH
 export PATH=~/scripts:$PATH
 export PATH=~/scripts/control:$PATH
 export PATH=~/scripts/programming:$PATH
+export PATH=~/scripts/battery_status:$PATH
 export PATH=~/scripts/docker_files:$PATH
 export PATH=~/funcs:$PATH
 export PATH=/usr/local/MATLAB/R2016b/bin:$PATH
