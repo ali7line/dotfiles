@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+from time import time
 
 class Battery():
 
@@ -138,6 +139,8 @@ class Battery():
 
     def all_info(self):
         info = {
+                "name": self.name,
+                "time": time(),
                 "model" : self.model_info,
                 "voltage": self.voltage_info,
                 "status": self.status_info,
