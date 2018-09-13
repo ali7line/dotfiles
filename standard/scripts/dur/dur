@@ -1,0 +1,93 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+from functools import wraps
+from mutagen.mp3 import HeaderNotFoundError
+from time import time
+import mutagen
+import os
+import os.path
+import ffprobe3
+from subprocess import run
+import json
+from datetime import timedelta
+        
+        
+def timing(f):
+    @wraps(f)
+    def wrapper(*args, **kwargs):
+        start = time()
+        result = f(*args, **kwargs)
+        end = time()
+        print('Elapsed time: {}'.format(end-start))
+        return result
+    return wrapper
+
+@timing
+def get_meta(func):
+    total = 0
+    path = os.environ.get('PWD')
+    if not path:
+        raise "PWD envionment variable not found"
+    for dirpath, dirnames, filenames in os.walk(path):
+        for filename in [f for f in filenames if f.endswith(".mp3")]:
+            file_ = os.path.join(dirpath, filename) 
+            #print(file_)
+            out = func(file_)
+            if out:
+                total += int(float(out))
+                print(total)
+            else:
+                print('no output for:', file_)
+                # try another from the list
+                pass
+
+    return total
+
+
+
+def mutagen_method(file_):
+        try:
+            meta = mutagen.File(file_)
+            print(meta.info.length)
+        except HeaderNotFoundError:
+            print('some issue with library')
+        #for stream in metadata.streams:
+        #    print("\tStream contains "+ stream.duration + "sec ")
+
+
+def ffprobe3_method():
+    for dirpath, dirnames, filenames in os.walk("."):
+        for filename in [f for f in filenames if f.endswith(".mp3")]:
+            file_ = os.path.join(dirpath, filename) 
+            print(file_)
+            try:
+                meta = ffprobe3.FFProbe(file_)
+                if len(meta.streams) > 0:
+                    print(meta.streams[0].duration)
+            except ValueError:
+                print('some issue with library')
+            #for stream in metadata.streams:
+            #    print("\tStream contains "+ stream.duration + "sec ")
+
+
+def system_method(file_):
+    try:
+        s = run([
+            'ffprobe','-v', 'quiet',
+            '-print_format', 'json', '-show_format',
+            file_], capture_output=True)
+        d = json.loads(s.stdout)
+        seconds = d['format']['duration']
+        #print(seconds)
+        return seconds
+    except KeyError:
+        print('there was an issue')
+        return None
+
+
+if __name__ == '__main__':
+    #get_meta(mutagen_method)
+    out = get_meta(system_method)
+    print(timedelta(seconds=out), 'sec')
+    #ffprobe3_method()
