@@ -109,6 +109,19 @@ else:
 	${5:pass}
 endsnippet
 
+##########################
+
+snippet timing "Try / Except" b
+def timing(f):
+    @wraps(f)
+    def wrapper(*args, **kwargs):
+        start = time()
+        result = f(*args, **kwargs)
+        end = time()
+        print('Elapsed time: {}'.format(end-start))
+        return result
+    return wrapper
+endsnippet
 
 ###########################
 ## TRY / EXCEPT / FINALLY #
