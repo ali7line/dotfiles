@@ -11,7 +11,13 @@ import ffprobe3
 from subprocess import run
 import json
 from datetime import timedelta
+import argparse
         
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--type', required=True)
+    args = parser.parse_args()
+    return args
         
 def timing(f):
     @wraps(f)
@@ -24,13 +30,13 @@ def timing(f):
     return wrapper
 
 @timing
-def get_meta(func):
+def get_meta(func, type_):
     total = 0
     path = os.environ.get('PWD')
     if not path:
         raise "PWD envionment variable not found"
     for dirpath, dirnames, filenames in os.walk(path):
-        for filename in [f for f in filenames if f.endswith(".mp3")]:
+        for filename in [f for f in filenames if f.endswith("."+type_)]:
             file_ = os.path.join(dirpath, filename) 
             #print(file_)
             out = func(file_)
@@ -43,7 +49,6 @@ def get_meta(func):
                 pass
 
     return total
-
 
 
 def mutagen_method(file_):
@@ -87,7 +92,8 @@ def system_method(file_):
 
 
 if __name__ == '__main__':
+    args = parse_args()
     #get_meta(mutagen_method)
-    out = get_meta(system_method)
+    out = get_meta(system_method, args.type)
     print(timedelta(seconds=out), 'sec')
     #ffprobe3_method()
