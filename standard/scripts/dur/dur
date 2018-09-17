@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+from datetime import timedelta
 from functools import wraps
 from mutagen.mp3 import HeaderNotFoundError
+from subprocess import run
 from time import time
+import argparse
+import ffprobe3
+import json
 import mutagen
 import os
-import os.path
-import ffprobe3
-from subprocess import run
-import json
-from datetime import timedelta
-import argparse
         
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -54,26 +53,23 @@ def get_meta(func, type_):
 def mutagen_method(file_):
         try:
             meta = mutagen.File(file_)
-            print(meta.info.length)
+            seconds = meta.info.length 
+            return seconds
         except HeaderNotFoundError:
             print('some issue with library')
-        #for stream in metadata.streams:
-        #    print("\tStream contains "+ stream.duration + "sec ")
+            return None
 
 
-def ffprobe3_method():
-    for dirpath, dirnames, filenames in os.walk("."):
-        for filename in [f for f in filenames if f.endswith(".mp3")]:
-            file_ = os.path.join(dirpath, filename) 
-            print(file_)
-            try:
-                meta = ffprobe3.FFProbe(file_)
-                if len(meta.streams) > 0:
-                    print(meta.streams[0].duration)
-            except ValueError:
-                print('some issue with library')
-            #for stream in metadata.streams:
-            #    print("\tStream contains "+ stream.duration + "sec ")
+def ffprobe3_method(file_):
+        try:
+            meta = ffprobe3.FFProbe(file_)
+            if len(meta.streams) > 0:
+                seconds = meta.streams[0].duration
+                print(seconds)
+            return seconds
+        except ValueError:
+            print('some issue with library')
+            return None
 
 
 def system_method(file_):
@@ -84,7 +80,6 @@ def system_method(file_):
             file_], capture_output=True)
         d = json.loads(s.stdout)
         seconds = d['format']['duration']
-        #print(seconds)
         return seconds
     except KeyError:
         print('there was an issue')
