@@ -315,7 +315,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift"   }, "n", function () awful.util.spawn("pkill nm-applet") end),
 
     -- Shortcuts
-    awful.key({ modkey, "Shift"   }, "0", dota2),
+    -- awful.key({ modkey, "Shift"   }, "0", dota2),
 
     -- F's
     awful.key({ modkey,           }, "F12", function () awful.util.spawn("slock") end),
