@@ -1,6 +1,8 @@
 
 
 local awful = require("awful")
+local gears = require("gears")
+local naughty = require("naughty")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
 
 local double_tap_timer = nil

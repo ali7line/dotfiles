@@ -259,10 +259,9 @@ root.buttons(awful.util.table.join(
 ))
 -- }}}
 
+local home_dir = os.getenv("HOME")
 -- {{{ Key bindings
-dofile("keyboard.lua")
-
-
+dofile(home_dir .. "/.config/awesome/keyboard.lua")
 -- }}}
 
 clientbuttons = awful.util.table.join(
