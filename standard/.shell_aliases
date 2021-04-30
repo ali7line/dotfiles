@@ -86,6 +86,7 @@ alias tat="tmux new-session -As $(basename $PWD | tr . -)"
 
 ## awesome
 alias eA='vim ~/.config/awesome/rc.lua'
+alias eAk='vim ~/.config/awesome/keyboard.lua'
 
 ## qutebrowser
 alias eQ='vim ~/.config/qutebrowser/qutebrowser.conf'

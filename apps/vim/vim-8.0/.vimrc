@@ -171,7 +171,7 @@ set tw=79   " width of document (used by gd)
 set nowrap  " don't automatically wrap on load
 set fo-=t   " don't automatically wrap text when typing
 set colorcolumn=120
-highlight ColorColumn ctermbg=233
+highlight ColorColumn ctermbg=117
 highlight Normal ctermbg=none
 set cursorline
 highlight Cursorline cterm=none ctermbg=234

@@ -12,6 +12,7 @@ export PATH=~/scripts/dur:$PATH
 export PATH=~/scripts/docker_files:$PATH
 export PATH=~/funcs:$PATH
 export PATH=/usr/local/MATLAB/R2016b/bin:$PATH
+export PATH=~/screenlayout:$PATH
 
 export WEECHAT_HOME=$HOME/.config/weechat
 
