@@ -151,7 +151,12 @@ class Battery():
 
 
 
-BAT0 = Battery('/sys/class/power_supply/BAT0', 'BAT0')
-BAT1 = Battery('/sys/class/power_supply/BAT1', 'BAT1')
-print(BAT0.all_info())
-print(BAT1.all_info())
+try:
+    BAT = []
+    for i in range(3):
+        BAT.append(Battery(f'/sys/class/power_supply/BAT{i}', f'BAT{i}'))
+except:
+    pass
+
+for b in BAT:
+    print(b.all_info())
